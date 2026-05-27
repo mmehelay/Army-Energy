@@ -1,167 +1,654 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// PAGE STYLES
-// Interior pages have their own stylesheet for styles that only exist on
-// that page. Any styles shared between pages, including repeated sections,
-// should go into root.scss
-// ─────────────────────────────────────────────────────────────────────────────
+/* ========================================================= */
+/* INCENTIVES PAGE */
+/* ========================================================= */
 
-/*-- -------------------------- -->
-<---          Reviews           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #reviews-67 {
-        padding: var(--sectionPadding);
-
-        .cs-container {
-            width: 100%;
-            max-width: calc(1280 / 16 * 1rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
-
-        .cs-card-group {
-            padding: 0;
-            margin: 0;
-            display: grid;
-            column-gap: calc(20 / 16 * 1rem);
-            row-gap: calc(64 / 16 * 1rem);
-            width: 100%;
-            grid-template-columns: repeat(12, 1fr);
-        }
-
-        .cs-item {
-            grid-column: span 12;
-            text-align: left;
-            list-style: none;
-            width: 100%;
-            /* pushes up the same amount the cs-item-img overlaps the card */
-            margin: calc(40 / 16 * 1rem) 0 0 0;
-            /* Padding L & R - 16px - 32px */
-            padding: calc(60 / 16 * 1rem) clamp(1rem, 3.2vw, 2rem) 0;
-            /* 32px - 40px */
-            padding-bottom: clamp(2rem, 5.4vw, 2.5rem);
-            box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
-            border-radius: calc(4 / 16 * 1rem);
-            background: #fff;
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-items: center;
-            /* Prevents padding from affecting height & width */
-            box-sizing: border-box;
-
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-        }
-
-        .cs-item-img {
-            width: calc(80 / 16 * 1rem);
-            height: calc(80 / 16 * 1rem);
-            position: absolute;
-            top: calc(-40 / 16 * 1rem);
-        }
-
-        .cs-item-text {
-            font-size: calc(16 / 16 * 1rem);
-            line-height: 1.5em;
-            margin: 0 0 calc(20 / 16 * 1rem);
-            padding-bottom: calc(20 / 16 * 1rem);
-            color: var(--bodyTextColor);
-            border-bottom: 1px solid #e8e9ec;
-        }
-
-        .cs-info {
-            width: 100%;
-            /* margin-top auto pushes up against the rest of the card, that way when one card has more text than the other, the reviewer info is always pushed to the bottom and lined up with the rest of them.  This ensures better responsiveness for changing content */
-            margin: auto 0 0 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .cs-flex-group {
-            width: 100%;
-            margin: 0;
-        }
-
-        .cs-name {
-            font-size: calc(16 / 16 * 1rem);
-            line-height: 1.5em;
-            font-weight: 700;
-            width: 40%;
-            margin: 0;
-            display: block;
-            color: var(--headerColor);
-        }
-
-        .cs-desc {
-            font-size: calc(14 / 16 * 1rem);
-            font-weight: 400;
-            color: #7d799c;
-            display: block;
-        }
-
-        .cs-item-stars {
-            width: calc(96 / 16 * 1rem);
-            height: calc(16 / 16 * 1rem);
-        }
+:root {
+    --navy: #0a1628;
+    --gold: #d4a017;
+    --gold-dark: #a07810;
+    --white: #ffffff;
+    --gray: #687386;
+    --dark-gray: #1f2937;
+    --light-gray: #f5f6f8;
+    --font-display: "Barlow Condensed", sans-serif;
+    --font-body: "Barlow", sans-serif;
+  }
+  
+  .incentives-page {
+    background: var(--white);
+    font-family: var(--font-body);
+  }
+  
+  /* HERO */
+  
+  .page-hero {
+    padding: 180px 24px 120px;
+    text-align: center;
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(212, 160, 23, 0.16),
+        transparent 36%
+      ),
+      linear-gradient(
+        135deg,
+        #0a1628 0%,
+        #0a1628 48%,
+        #101f35 72%,
+        #182b45 100%
+      );
+  }
+  
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(58px, 8vw, 108px);
+    line-height: 0.9;
+    font-weight: 900;
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0 0 24px;
+  }
+  
+  .page-hero p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 36px;
+  }
+  
+  /* TRUST BAR */
+  
+  .trust-bar {
+    background: var(--gold);
+  }
+  
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .trust-item {
+    padding: 20px;
+    text-align: center;
+    border-right: 1px solid rgba(10, 22, 40, 0.15);
+  }
+  
+  .trust-item strong {
+    display: block;
+    color: var(--navy);
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  
+  .trust-item span {
+    display: block;
+    margin-top: 6px;
+    color: rgba(10, 22, 40, 0.7);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  /* BASE */
+  
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  .section {
+    padding: 96px 0;
+  }
+  
+  .section-gray {
+    background: var(--light-gray);
+  }
+  
+  .section-dark,
+  .section-navy {
+    background: var(--navy);
+  }
+  
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56px;
+  }
+  
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mb-40 {
+    margin-bottom: 40px;
+  }
+  
+  .center-line {
+    margin: 20px auto;
+  }
+  
+  .section-tag {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 0.95;
+    font-weight: 900;
+    color: var(--navy);
+    text-transform: uppercase;
+  }
+  
+  .text-white {
+    color: var(--white);
+  }
+  
+  .accent {
+    color: var(--gold);
+  }
+  
+  .gold-line {
+    width: 72px;
+    height: 3px;
+    background: var(--gold);
+    margin: 20px 0;
+  }
+  
+  /* INTRO */
+  
+  .intro-grid {
+    align-items: start;
+  }
+  
+  .body-text {
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--gray);
+  }
+  
+  .highlight-box {
+    margin-top: 24px;
+    padding: 22px 24px;
+    border-left: 4px solid var(--gold);
+    background: rgba(212, 160, 23, 0.06);
+    border-radius: 6px;
+  }
+  
+  .highlight-box p {
+    margin: 0;
+    color: var(--dark-gray);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  
+  .program-badge {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 8px 14px;
+    border-radius: 50px;
+    background: rgba(212, 160, 23, 0.12);
+    border: 1px solid rgba(212, 160, 23, 0.3);
+    color: var(--gold-dark);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .program-link {
+    margin-top: 14px;
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  
+  /* SOLAR CARD */
+  
+  .solar-card {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 34px;
+    border: 1px solid rgba(212, 160, 23, 0.18);
+  }
+  
+  .solar-card h3 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 900;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .solar-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 24px;
+  }
+  
+  .solar-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .solar-stat {
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    text-align: center;
+  }
+  
+  .gold-stat {
+    background: rgba(212, 160, 23, 0.1);
+    border: 1px solid rgba(212, 160, 23, 0.3);
+  }
+  
+  .solar-stat p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+  
+  .gold-stat p {
+    color: var(--gold);
+  }
+  
+  .solar-stat strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 16px;
+    color: var(--white);
+  }
+  
+  .gold-stat strong {
+    font-size: 30px;
+    color: var(--gold);
+  }
+  
+  .solar-stat span {
+    display: block;
+    margin-top: 6px;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 11px;
+  }
+  
+  /* CHECK LIST */
+  
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .check-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    line-height: 1.65;
+    color: var(--dark-gray);
+  }
+  
+  .check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 900;
+  }
+  
+  .section-dark .check-list li,
+  .section-navy .check-list li,
+  .solar-card .check-list li {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  /* SAVINGS */
+  
+  .section-subtext {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+  
+  .savings-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(10, 22, 40, 0.08);
+    box-shadow: 0 12px 40px rgba(10, 22, 40, 0.06);
+  }
+  
+  .savings-card-header {
+    padding: 22px 20px;
+    background: var(--navy);
+  }
+  
+  .gold-header {
+    background: var(--gold-dark);
+  }
+  
+  .savings-card-header .type {
+    color: var(--gold);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  
+  .gold-header .type {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .savings-card-header h4 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 900;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+  
+  .savings-card-body {
+    padding: 20px;
+  }
+  
+  .savings-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(10, 22, 40, 0.08);
+  }
+  
+  .savings-row:last-child {
+    border-bottom: none;
+  }
+  
+  .label {
+    color: var(--gray);
+    font-size: 13px;
+  }
+  
+  .value {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 800;
+    text-align: right;
+  }
+  
+  .value.gold {
+    color: var(--gold-dark);
+  }
+  
+  .value.green {
+    color: #2e7d32;
+  }
+  
+  .warning-box {
+    max-width: 920px;
+    margin: 30px auto 0;
+    padding: 22px 24px;
+    border-radius: 8px;
+    background: rgba(229, 57, 53, 0.08);
+    border: 1px solid rgba(229, 57, 53, 0.2);
+  }
+  
+  .warning-box p {
+    margin: 0;
+    color: var(--dark-gray);
+    font-size: 13px;
+    line-height: 1.75;
+  }
+  
+  /* DARK SECTION */
+  
+  .dark-title {
+    font-family: var(--font-display);
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+  }
+  
+  /* CARDS */
+  
+  .card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid rgba(10, 22, 40, 0.08);
+    box-shadow: 0 12px 40px rgba(10, 22, 40, 0.06);
+  }
+  
+  .card-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 18px;
+  }
+  
+  .card h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: var(--gray);
+    line-height: 1.7;
+  }
+  
+  .cta-row {
+    margin-top: 42px;
+  }
+  
+  .cta-row.small {
+    margin-top: 24px;
+  }
+  
+  /* BUTTONS */
+  
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 0 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      border-color 0.25s ease;
+  }
+  
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+  }
+  
+  .btn-primary:hover {
+    background: var(--gold-dark);
+    color: var(--white);
+  }
+  
+  .btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--white);
+  }
+  
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  
+  /* CALCULATOR */
+  
+  .calc-subtext {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    max-width: 600px;
+    margin: 16px auto 0;
+    line-height: 1.7;
+  }
+  
+  .calc-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 36px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 160, 23, 0.18);
+  }
+  
+  .range-group {
+    margin-bottom: 28px;
+  }
+  
+  .range-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .range-val {
+    color: var(--gold);
+  }
+  
+  .range-group input[type="range"] {
+    width: 100%;
+    accent-color: var(--gold);
+  }
+  
+  .calc-result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 32px;
+  }
+  
+  .calc-stat {
+    padding: 22px;
+    border-radius: 8px;
+    background: rgba(212, 160, 23, 0.08);
+    border: 1px solid rgba(212, 160, 23, 0.2);
+    text-align: center;
+  }
+  
+  .calc-stat .val {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 34px;
+    color: var(--gold);
+    font-weight: 900;
+  }
+  
+  .calc-stat .lbl {
+    display: block;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  /* DISCLAIMER */
+  
+  .disclaimer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px 36px;
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.75;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 1024px) {
+    .grid-2,
+    .grid-4,
+    .solar-stats,
+    .calc-result,
+    .trust-grid {
+      grid-template-columns: 1fr;
     }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #reviews-67 {
-        .cs-item {
-            grid-column: span 6;
-        }
+  }
+  
+  @media (max-width: 768px) {
+    .page-hero {
+      padding: 140px 20px 90px;
     }
-}
-
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #reviews-67 {
-        .cs-item {
-            grid-column: span 4;
-        }
+  
+    .section {
+      padding: 72px 0;
     }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #reviews-67 {
-            .cs-title,
-            .cs-text,
-            .cs-item-text,
-            .cs-name {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-item {
-                background: rgba(0, 0, 0, 0.2);
-            }
-
-            .cs-desc {
-                color: var(--primaryLight);
-            }
-        }
+  
+    .solar-card,
+    .calc-wrapper {
+      padding: 24px;
     }
-}
+  
+    .hero-buttons {
+      flex-direction: column;
+    }
+  
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+    }
+  
+    .range-label {
+      flex-direction: column;
+      gap: 6px;
+    }
+  }

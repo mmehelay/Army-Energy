@@ -1,7 +1,7 @@
 ---
-title: "About | Code Stitch Web Designs"
-description: "Meta description for the page"
-permalink: "/about/"
+title: "Commercial Solar Ontario | Army Energy"
+description: "Army Energy provides commercial solar solutions across Ontario, helping businesses reduce energy costs through solar panel installations, battery storage, and available incentive programs."
+permalink: "/commercial/"
 ---
 
 {% extends "layouts/base.html" %}
@@ -14,95 +14,233 @@ permalink: "/about/"
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
+<!-- ============================================================ -->
+<!-- COMMERCIAL PAGE -->
+<!-- ============================================================ -->
+<main id="commercial">
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">About Us</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/about/" class="cs-link cs-active">About Us</a>
-            </div>
+    <section class="comm-hero">
+      <div class="comm-hero__overlay"></div>
+  
+      <div class="comm-container comm-hero__content">
+        <p class="comm-tag">Ontario Commercial Solar</p>
+  
+        <h1>
+          Turn Rooftops Into<br>
+          <span>Revenue.</span>
+        </h1>
+  
+        <p class="comm-hero__text">
+          Commercial solar solutions for warehouses, industrial facilities, farms,
+          retail plazas, and office buildings across Ontario. Army Energy helps
+          businesses reduce hydro costs and explore available incentive opportunities.
+        </p>
+  
+        <div class="comm-hero__buttons">
+          <a href="/contact" class="comm-btn comm-btn--primary">
+            Request Commercial Assessment
+          </a>
+  
+          <a href="/incentives" class="comm-btn comm-btn--secondary">
+            View Incentives
+          </a>
         </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
-    </div>
-
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" decoding="async">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About CodeStitch</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </span>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/contact/" class="cs-button-solid">Get in Touch</a>
-            </div>
-        </div>
+      </div>
     </section>
-
+  
+    <section class="comm-trust">
+      <div class="comm-container comm-trust__inner">
+        <div class="comm-trust__item">Lower Energy Costs</div>
+        <div class="comm-trust__item">Improve Cash Flow & NOI</div>
+        <div class="comm-trust__item">Increase Property Value</div>
+        <div class="comm-trust__item">Energy Independence</div>
+        <div class="comm-trust__item">Sustainable Operations</div>
+      </div>
+    </section>
+  
+    <section class="comm-section">
+      <div class="comm-container">
+        <div class="comm-heading">
+          <p class="comm-tag">Why Commercial Solar</p>
+  
+          <h2>
+            Why Commercial Properties<br>
+            <span>Invest in Solar</span>
+          </h2>
+  
+          <div class="comm-line"></div>
+        </div>
+  
+        <div class="comm-grid-2">
+          <div>
+            <p class="comm-text">
+              Ontario commercial properties often have large unused rooftops, high
+              daytime electricity usage, and increasing operating costs. Commercial
+              solar systems help businesses reduce long-term hydro expenses while
+              improving property performance.
+            </p>
+  
+            <ul class="comm-list">
+              <li>Reduce exposure to rising hydro costs</li>
+              <li>Improve long-term cash flow and NOI</li>
+              <li>Increase tenant satisfaction and retention</li>
+              <li>Improve property competitiveness</li>
+              <li>Support ESG and sustainability goals</li>
+              <li>Offset peak demand charges</li>
+              <li>Use unused rooftop space to generate value</li>
+            </ul>
+  
+            <a href="/contact" class="comm-btn comm-btn--primary">
+              Book a Free Commercial Assessment
+            </a>
+          </div>
+  
+          <div class="comm-energy-card">
+            <h3>Commercial Energy Model</h3>
+  
+            <p class="comm-energy-card__subtitle">
+              A smarter way to manage energy
+            </p>
+  
+            <div class="comm-energy-grid">
+              <div class="comm-energy-mini">
+                <p class="comm-energy-mini__label">Traditional Model</p>
+                <h4>Tenant Pays Utility</h4>
+                <p>Energy dollars leave the property every month.</p>
+              </div>
+  
+              <div class="comm-energy-mini comm-energy-mini--active">
+                <p class="comm-energy-mini__label">Future Model</p>
+                <h4>Owned Energy Infrastructure</h4>
+                <p>Energy dollars stay on-site, improving NOI and asset value.</p>
+              </div>
+            </div>
+  
+            <div class="comm-energy-highlight">
+              <p>
+                Instead of energy dollars leaving the property every month,
+                property owners may retain and monetize a portion of that
+                energy spend.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="comm-section comm-section--gray">
+      <div class="comm-container">
+        <div class="comm-heading">
+          <p class="comm-tag">By Property Type</p>
+  
+          <h2>
+            Solar Solutions<br>
+            <span>By Industry</span>
+          </h2>
+  
+          <div class="comm-line"></div>
+        </div>
+  
+        <div class="comm-card-grid">
+          <div class="comm-card">
+            <div class="comm-icon">🏢</div>
+            <h3>Warehouses</h3>
+            <p>Large flat rooftops are ideal for high-output commercial solar systems.</p>
+          </div>
+  
+          <div class="comm-card">
+            <div class="comm-icon">🏭</div>
+            <h3>Industrial Buildings</h3>
+            <p>Manufacturing and industrial facilities can offset heavy daytime energy use.</p>
+          </div>
+  
+          <div class="comm-card">
+            <div class="comm-icon">🌱</div>
+            <h3>Farms & Greenhouses</h3>
+            <p>Agricultural properties can reduce operating costs with solar systems.</p>
+          </div>
+  
+          <div class="comm-card">
+            <div class="comm-icon">🏬</div>
+            <h3>Retail Plazas</h3>
+            <p>Retail plazas can offset common-area electricity and operating expenses.</p>
+          </div>
+  
+          <div class="comm-card">
+            <div class="comm-icon">🏢</div>
+            <h3>Office Buildings</h3>
+            <p>Office properties benefit from solar production during daytime occupancy.</p>
+          </div>
+  
+          <div class="comm-card">
+            <div class="comm-icon">🏫</div>
+            <h3>Institutions</h3>
+            <p>Schools and institutional facilities can reduce long-term energy expenses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="comm-section comm-section--dark">
+      <div class="comm-container">
+        <div class="comm-heading">
+          <p class="comm-tag">Our Process</p>
+  
+          <h2>
+            Our Turnkey<br>
+            <span>Commercial Solar Process</span>
+          </h2>
+  
+          <div class="comm-line"></div>
+        </div>
+  
+        <div class="comm-process-grid">
+          <div class="comm-process-card">
+            <div class="comm-process-card__number">1</div>
+            <h3>Assess</h3>
+            <p>We evaluate your energy usage, roof space, and facility requirements.</p>
+          </div>
+  
+          <div class="comm-process-card">
+            <div class="comm-process-card__number">2</div>
+            <h3>Design</h3>
+            <p>We create a customized commercial solar layout for your property.</p>
+          </div>
+  
+          <div class="comm-process-card">
+            <div class="comm-process-card__number">3</div>
+            <h3>Incentives</h3>
+            <p>We help review available Ontario incentive opportunities.</p>
+          </div>
+  
+          <div class="comm-process-card">
+            <div class="comm-process-card__number">4</div>
+            <h3>Install</h3>
+            <p>Installation is coordinated with minimal disruption to operations.</p>
+          </div>
+  
+          <div class="comm-process-card">
+            <div class="comm-process-card__number">5</div>
+            <h3>Commission</h3>
+            <p>The system is inspected, tested, and prepared for operation.</p>
+          </div>
+  
+          <div class="comm-process-card">
+            <div class="comm-process-card__number">6</div>
+            <h3>Support</h3>
+            <p>Ongoing support helps maintain long-term system performance.</p>
+          </div>
+        </div>
+  
+        <div class="comm-center">
+          <a href="/contact" class="comm-btn comm-btn--primary">
+            Start My Commercial Solar Assessment
+          </a>
+        </div>
+      </div>
+    </section>
+  
+  </main>
     {% include 'sections/cta.html' %}
 
 {% endblock %}

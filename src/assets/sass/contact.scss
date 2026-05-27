@@ -1,361 +1,300 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// PAGE STYLES
-// Interior pages have their own stylesheet for styles that only exist on
-// that page. Any styles shared between pages, including repeated sections,
-// should go into root.scss
-// ─────────────────────────────────────────────────────────────────────────────
-
-/*-- -------------------------- -->
-<---          Contact           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #cs-contact-265 {
-        padding: var(--sectionPadding);
-
-        .cs-container {
-            width: 100%;
-            /* changes to 1280px at tablet */
-            max-width: calc(550 / 16 * 1rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: left;
-            width: 100%;
-            margin: 0 0 calc(32 / 16 * 1rem) 0;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: flex-start;
-        }
-
-        #cs-form-265 {
-            label {
-                font-size: calc(16 / 16 * 1rem);
-                line-height: 1.5em;
-                font-weight: 700;
-                /* 12px - 20px */
-                margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
-                color: var(--headerColor);
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            .cs-label-message {
-                /* 32px - 48px */
-                margin-bottom: clamp(2rem, 6.3vw, 3rem);
-            }
-
-            input,
-            textarea {
-                font-size: calc(16 / 16 * 1rem);
-                width: 100%;
-                height: calc(64 / 16 * 1rem);
-                margin-top: calc(4 / 16 * 1rem);
-                padding-left: calc(20 / 16 * 1rem);
-                border: 1px solid #b4b2c7;
-                border-radius: calc(4 / 16 * 1rem);
-                /* prevents border & padding from affecting height */
-                box-sizing: border-box;
-                transition: border 0.3s;
-
-                &:hover {
-                    border: 1px solid var(--primary);
-                }
-            }
-
-            textarea {
-                font-family: inherit;
-                padding-top: calc(20 / 16 * 1rem);
-                min-height: calc(120 / 16 * 1rem);
-            }
-
-            .cs-button-solid {
-                width: 100%;
-            }
-        }
-
-        .cs-button-solid {
-            font-size: calc(16 / 16 * 1rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: calc(150 / 16 * 1rem);
-            padding: 0 calc(24 / 16 * 1rem);
-            background-color: var(--primary);
-            border-radius: calc(4 / 16 * 1rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: calc(4 / 16 * 1rem);
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
-
-        .cs-submit {
-            width: 100%;
-            border: none;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
-        .cs-right-section {
-            width: 100%;
-            height: calc(320 / 16 * 1rem);
-            /* 24px - 40px top & bottom */
-            /* 20px - 40px left & right */
-            padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2.5rem);
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
-            border-radius: calc(4 / 16 * 1rem);
-            /* cuts off corners on img tag */
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-end;
-            position: relative;
-        }
-
-        .cs-header {
-            /* 16px - 20px */
-            font-size: clamp(1rem, 3vw, 1.25rem);
-            line-height: 1.2em;
-            font-weight: 700;
-            margin-bottom: calc(8 / 16 * 1rem);
-            color: var(--bodyTextColorWhite);
-            display: block;
-        }
-
-        .cs-link {
-            /* 16px - 20px */
-            font-size: clamp(1rem, 3vw, 1.25rem);
-            line-height: 1.2em;
-            text-decoration: none;
-            margin-bottom: calc(20 / 16 * 1rem);
-            color: var(--bodyTextColorWhite);
-            display: block;
-            position: relative;
-
-            &:before {
-                /* Animated underline */
-                content: "";
-                width: 0%;
-                height: 2px;
-                /* current color of the parent */
-                background: currentColor;
-                opacity: 1;
-                position: absolute;
-                display: block;
-                bottom: calc(-2 / 16 * 1rem);
-                left: 0;
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
-
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-        }
-
-        .cs-block {
-            /* sends second address line to the bottom on its own line */
-            display: block;
-        }
-
-        .cs-bg-picture {
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            transition: transform 0.6s;
-
-            &:before {
-                /* background color overlay */
-                content: "";
-                position: absolute;
-                display: block;
-                height: 100%;
-                width: 100%;
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-                top: 0;
-                left: 0;
-                z-index: 1;
-            }
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                /* Makes img tag act as a background image */
-                object-fit: cover;
-            }
-        }
+:root {
+    --navy: #0a1628;
+    --gold: #d4a017;
+    --gold-dark: #9e7710;
+    --white: #ffffff;
+    --gray: #6b7280;
+    --dark-gray: #1f2937;
+    --font-display: 'Barlow Condensed', sans-serif;
+  }
+  
+  /* ============================================ */
+  /* Banner - Army Energy Style                   */
+  /* ============================================ */
+  
+  #contact-banner {
+    padding: 180px 24px 120px;
+    text-align: center;
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(212,160,23,0.16),
+        transparent 36%
+      ),
+      linear-gradient(
+        135deg,
+        #0a1628 0%,
+        #0a1628 48%,
+        #101f35 72%,
+        #182b45 100%
+      );
+  }
+  
+  #contact-banner .cs-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  #contact-banner .section-tag {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  
+  #contact-banner h1 {
+    font-family: var(--font-display);
+    font-size: clamp(58px, 8vw, 108px);
+    line-height: 0.9;
+    font-weight: 900;
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0 0 24px;
+  }
+  
+  #contact-banner .accent {
+    color: var(--gold);
+  }
+  
+  #contact-banner p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.68);
+    font-size: 17px;
+    line-height: 1.7;
+  }
+  
+  /* ============================================ */
+  /* Contact Form Section                         */
+  /* ============================================ */
+  
+  #contact-568 {
+    padding: 100px 24px;
+    background: #fafbfc;
+  }
+  
+  #contact-568 .cs-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 0.85fr;
+    gap: 32px;
+    align-items: stretch;
+  }
+  
+  #contact-568 .cs-left {
+    background: var(--white);
+    border-radius: 14px;
+    padding: clamp(32px, 5vw, 56px);
+    border: 1px solid rgba(10,22,40,0.08);
+    box-shadow: 0 18px 55px rgba(10,22,40,0.08);
+  }
+  
+  #contact-568 .cs-content {
+    margin-bottom: 32px;
+  }
+  
+  #contact-568 .cs-topper {
+    display: block;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  
+  #contact-568 .cs-title {
+    font-family: var(--font-display);
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 0.95;
+    font-weight: 900;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0 0 16px;
+  }
+  
+  #contact-568 .cs-text {
+    max-width: 620px;
+    color: var(--gray);
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+  }
+  
+  #contact-568 .cs-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  
+  #contact-568 .cs-label {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  #contact-568 .cs-message {
+    grid-column: 1 / -1;
+  }
+  
+  #contact-568 .cs-input {
+    width: 100%;
+    height: 56px;
+    border: 1px solid rgba(10,22,40,0.12);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--dark-gray);
+    padding: 0 18px;
+    font-size: 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition:
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+  
+  #contact-568 .cs-input:hover {
+    border-color: rgba(212,160,23,0.55);
+  }
+  
+  #contact-568 .cs-input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 4px rgba(212,160,23,0.14);
+  }
+  
+  #contact-568 .cs-textarea {
+    min-height: 160px;
+    padding-top: 18px;
+    resize: vertical;
+  }
+  
+  #contact-568 .cs-submit {
+    grid-column: 1 / -1;
+    min-height: 56px;
+    border: none;
+    border-radius: 6px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease;
+  }
+  
+  #contact-568 .cs-submit:hover {
+    background: var(--gold-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+  }
+  
+  /* Right Info Card */
+  
+  #contact-568 .cs-right {
+    background: var(--navy);
+    border-radius: 14px;
+    padding: clamp(32px, 5vw, 48px);
+    border: 1px solid rgba(212,160,23,0.18);
+    box-shadow: 0 18px 55px rgba(10,22,40,0.14);
+  }
+  
+  #contact-568 .cs-header {
+    display: block;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+  
+  #contact-568 .cs-link {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+  
+  #contact-568 .cs-link:hover {
+    color: var(--gold);
+  }
+  
+  #contact-568 .cs-phone {
+    margin-bottom: 28px;
+  }
+  
+  #contact-568 .cs-info {
+    color: rgba(255,255,255,0.68);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0 0 28px;
+  }
+  
+  #contact-568 .cs-mini-card {
+    margin-top: 8px;
+    padding: 20px;
+    background: rgba(212,160,23,0.08);
+    border: 1px solid rgba(212,160,23,0.22);
+    border-radius: 10px;
+  }
+  
+  #contact-568 .cs-mini-card strong {
+    display: block;
+    color: var(--gold);
+    font-family: var(--font-display);
+    font-size: 22px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  
+  #contact-568 .cs-mini-card p {
+    color: rgba(255,255,255,0.65);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 1024px) {
+    #contact-568 .cs-container {
+      grid-template-columns: 1fr;
     }
-}
-
-/* Tablet - 700px */
-@media only screen and (min-width: 43.75rem) {
-    #cs-contact-265 {
-        .cs-container {
-            max-width: calc(1280 / 16 * 1rem);
-        }
-
-        #cs-form-265 {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-
-            label {
-                width: 48%;
-            }
-
-            .cs-label-message {
-                width: 100%;
-            }
-        }
+  }
+  
+  @media (max-width: 768px) {
+    #contact-banner {
+      padding: 140px 20px 80px;
     }
-}
-
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #cs-contact-265 {
-        .cs-container {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: calc(80 / 16 * 1rem);
-        }
-
-        .cs-left-section {
-            max-width: calc(630 / 16 * 1rem);
-        }
-
-        #cs-form-265 {
-            label {
-                width: 100%;
-            }
-        }
-
-        .cs-right-section {
-            /* changes to 578px at 1300px wide */
-            height: calc(686 / 16 * 1rem);
-            width: 40vw;
-            max-width: calc(542 / 16 * 1rem);
-            /* prevents flexbox from squishing it */
-            flex: none;
-
-            &:hover {
-                .cs-bg-picture {
-                    transform: scale(1.1);
-                }
-            }
-        }
-
-        .cs-block {
-            /* goes back to inline so it stays "in line" with the rest of the text */
-            display: inline-block;
-        }
+  
+    #contact-568 {
+      padding: 72px 20px;
     }
-}
-
-/* Small Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
-    #cs-contact-265 {
-        #cs-form-265 {
-            column-gap: calc(0 / 16 * 1rem);
-            label {
-                width: 48%;
-                max-width: calc(305 / 16 * 1rem);
-            }
-
-            .cs-label-message {
-                max-width: 100%;
-            }
-        }
-
-        .cs-right-section {
-            height: calc(578 / 16 * 1rem);
-        }
+  
+    #contact-568 .cs-form {
+      grid-template-columns: 1fr;
     }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #cs-contact-265 {
-            .cs-text,
-            .cs-title {
-                color: var(--bodyTextColorWhite);
-            }
-
-            #cs-form-265 {
-                label,
-                input,
-                textarea {
-                    background-color: transparent;
-                    color: var(--bodyTextColorWhite);
-
-                    &::placeholder {
-                        /* lighten up the color of the text by 40%*/
-                        filter: brightness(1.4);
-                    }
-                }
-            }
-
-            .cs-bg-picture {
-                background-color: #000;
-
-                img {
-                    /* lets parent background-color bleed through and darken it */
-                    opacity: 0.5;
-                }
-            }
-        }
+  
+    #contact-568 .cs-left,
+    #contact-568 .cs-right {
+      padding: 28px;
     }
-}
+  }

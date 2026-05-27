@@ -1,15 +1,15 @@
 module.exports = {
-    name: "Code Stitch Web Designs",
-    email: "help@codestitch.app",
-    phoneForTel: "555-779-4407",
-    phoneFormatted: "(555) 779-4407",
+    name: "Army Energy",
+    email: "info@armyenergy.ca",
+    phoneForTel: "647-229-7005",
+    phoneFormatted: "(647) 229-7005",
     address: {
         lineOne: "First Address Line",
         lineTwo: "Second Address Line",
-        city: "Denver",
-        state: "CO",
+        city: "Toronto",
+        state: "ON",
         zip: "80206",
-        country: "US",
+        country: "CA",
         mapLink: "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6",
     },
     socials: {

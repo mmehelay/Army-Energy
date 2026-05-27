@@ -1,121 +1,189 @@
 ---
-title: "Project One | Code Stitch Web Designs"
-description: "Meta description for the page"
-permalink: "/project-one/"
+title: "Residential Solar | Army Energy"
+description: "Residential solar panels, battery storage, and Ontario homeowner solar rebate information."
+permalink: "/Residential/"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/projects.css">
+<link rel="stylesheet" href="/assets/css/projects.css">
 {% endblock %}
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
+<!-- ============================================================ -->
+<!-- RESIDENTIAL PAGE -->
+<!-- ============================================================ -->
+<main class="page residential-page" id="page-residential">
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Project One Gallery</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/project-one/" class="cs-link cs-active">Project One Gallery</a>
-            </div>
-        </div>
-        <!--Background Image-->
+  <div class="page-hero">
+    <div class="section-tag">For Homeowners</div>
+    <h1>POWER YOUR HOME.<br><span class="accent">SAVE FOR TOMORROW.</span></h1>
+    <p>Ontario programs and incentives can help make solar more affordable for homeowners. Eligible homeowners may qualify for up to $10,000 in rebates for solar panels and battery storage.</p>
+  </div>
 
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><div class="icon">&#8595;</div>Lower Hydro Bills</div>
+      <div class="trust-item"><div class="icon">&#36;</div>Government Incentives</div>
+      <div class="trust-item"><div class="icon">&#127807;</div>Cleaner Energy</div>
+      <div class="trust-item"><div class="icon">&#128200;</div>Increase Home Value</div>
+      <div class="trust-item"><div class="icon">&#9889;</div>Energy Independence</div>
     </div>
+  </div>
 
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2 residential-intro-grid">
+        <div>
+          <div class="section-tag">Home Reno Rebate Program</div>
+          <div class="section-title">THE HOME RENO REBATE PROGRAM HELPS YOU SAVE<br><span class="accent">UP TO $10,000</span></div>
+          <div class="gold-line"></div>
 
-    <section id="gallery-48">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Our Portfolio</span>
-                <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
+          <p class="res-body-text">The Home Reno Rebate Program provides rebates for eligible retrofits, including solar panels and battery storage. Eligible Ontario homeowners may qualify for:</p>
+
+          <div class="rebate-box">
+            <div class="rebate-inner">
+              <span class="rebate-amount">$5K</span>
+              <div>
+                <strong>Solar Photovoltaic (PV) Panels</strong>
+                <p>Up to $5,000 back for eligible solar panel installations. No home energy assessment required for this rebate path.</p>
+              </div>
             </div>
-            <div class="cs-image-group">
-                <div class="cs-row cs-row-1">
-                    <!-- Row 1-->
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" width="420" height="567">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" width="420" height="630">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" width="420" height="512">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" width="420" height="492">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" width="420" height="517">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" width="420" height="629">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new black window structure" width="420" height="625">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="kitchen rebovation" width="420" height="452">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="bathroom renovation" width="420" height="629">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
+          </div>
+
+          <div class="rebate-box">
+            <div class="rebate-inner">
+              <span class="rebate-amount">$5K</span>
+              <div>
+                <strong>Battery Storage for Solar</strong>
+                <p>Up to $5,000 more for eligible battery storage systems. Combined, eligible homeowners may save up to $10,000.</p>
+              </div>
             </div>
-            <a href="/contact/" class="cs-button-solid">Get Started</a>
+          </div>
         </div>
-    </section>
 
-    {% include 'sections/cta.html' %}
+        <div>
+          <div class="res-dark-card">
+            <h3>ELIGIBLE RETROFITS INCLUDE</h3>
+
+            <ul class="check-list">
+              <li>Solar photovoltaic (PV) systems</li>
+              <li>Battery storage for solar systems</li>
+              <li>Insulation & air sealing</li>
+              <li>Windows & doors</li>
+              <li>Heat pumps</li>
+              <li>Smart thermostats</li>
+              <li>And more eligible upgrades</li>
+            </ul>
+
+            <div class="res-dark-card-divider">
+              <h4>Who Can Apply?</h4>
+
+              <ul class="check-list">
+                <li>Ontario homeowners who own and live in their home</li>
+                <li>Households with combined annual income of $250,000 or less</li>
+                <li>Retrofits must be completed by an approved contractor</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="text-center mb-40">
+        <div class="section-tag">Step by Step</div>
+        <div class="section-title">HOW IT <span class="accent">WORKS</span></div>
+        <div class="gold-line center-line"></div>
+      </div>
+
+      <div class="grid-4">
+        <div class="card res-step-card">
+          <div class="card-icon">1</div>
+          <h3>Register</h3>
+          <p>Create your account and apply online through the program portal at homerenovationsavings.ca.</p>
+        </div>
+
+        <div class="card res-step-card">
+          <div class="card-icon">2</div>
+          <h3>Complete</h3>
+          <p>Get your retrofit completed by an approved contractor according to program specifications.</p>
+        </div>
+
+        <div class="card res-step-card">
+          <div class="card-icon">3</div>
+          <h3>Submit</h3>
+          <p>Submit your invoice and required supporting documents through the program portal.</p>
+        </div>
+
+        <div class="card res-step-card">
+          <div class="card-icon">4</div>
+          <h3>Get Paid</h3>
+          <p>Receive your rebate by direct deposit after successful review and approval of your submission.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Example Savings -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="grid-2 example-grid">
+        <div>
+          <div class="section-tag">Example Solar Savings</div>
+          <div class="section-title text-white">WHAT TO<br><span class="accent">EXPECT</span></div>
+          <div class="gold-line"></div>
+
+          <div class="expect-table">
+            <div class="expect-row">
+              <span>Average installed cost (after incentives)</span>
+              <strong>~$15,000*</strong>
+            </div>
+
+            <div class="expect-row">
+              <span>Potential annual savings on electricity</span>
+              <strong class="gold-text">~$1,200*</strong>
+            </div>
+
+            <div class="expect-row">
+              <span>Estimated payback period</span>
+              <strong>8–12 years*</strong>
+            </div>
+          </div>
+
+          <p class="expect-note">*Savings vary based on system size, location, energy usage, and utility rates.</p>
+        </div>
+
+        <div>
+          <div class="official-program-card">
+            <h3>OFFICIAL PROGRAM INFORMATION</h3>
+
+            <div class="official-program-box">
+              <strong>Home Reno Rebate Programs</strong>
+              <p>homerenovationsavings.ca/without-assessment/solar</p>
+            </div>
+
+            <div class="official-program-box">
+              <strong>Save on Energy</strong>
+              <p>saveonenergy.ca — Additional energy savings programs and resources.</p>
+            </div>
+
+            <div class="official-cta">
+              <a href="/contact" class="btn-primary">Book a Consultation with Army Energy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p class="disclaimer">Program rules, eligibility requirements, and rebate amounts are subject to change. Visit the official program website for the most up-to-date information. Army Energy is not affiliated with the government programs referenced on this page.</p>
+
+</main>
 
 {% endblock %}

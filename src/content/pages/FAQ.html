@@ -1,0 +1,181 @@
+---
+title: "FAQ | Army Energy"
+description: "Frequently asked questions about Ontario solar incentives, eligibility, and commercial solar installation."
+permalink: "/FAQ/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/FAQ.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================================ -->
+<!-- FAQ PAGE -->
+<!-- ============================================================ -->
+<main class="page faq-page" id="page-faq">
+
+  <div class="page-hero">
+    <div class="section-tag">Common Questions</div>
+    <h1>FREQUENTLY ASKED<br><span class="accent">QUESTIONS</span></h1>
+    <p>Answers to the most common questions about Ontario commercial solar incentives, eligibility, and the application process.</p>
+  </div>
+
+  <section class="section">
+    <div class="container faq-container">
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          What commercial solar incentives are available in Ontario?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            The primary commercial solar incentive in Ontario is through the Save on Energy Retrofit Program, which may provide incentive support for eligible commercial, industrial, and institutional behind-the-meter solar PV installations. Additionally, federal clean technology investment tax credits and accelerated capital cost allowance opportunities may be available. Incentive availability, amounts, and structures are subject to change — always verify with the program administrator.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Can businesses get up to 50% of project costs covered?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            The Save on Energy Retrofit Program states that eligible businesses may qualify for up to 50% of eligible project costs for targeted energy-efficiency retrofits, which can include solar PV systems. However, this is subject to program eligibility review and approval. Not every project will qualify for the maximum amount. Always confirm details with the program administrator before committing to a project.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Do I need approval before installing solar on my commercial property?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes. Incentive pre-approvals are mandatory before installation begins under the Save on Energy Retrofit Program. If you begin work before receiving pre-approval, you may forfeit your eligibility for incentive support. Always apply for and receive written pre-approval before starting any installation work.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Is this only for commercial properties, or can residential homeowners qualify too?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            The Save on Energy Retrofit Program is designed for commercial, industrial, and institutional participants. Residential homeowners have a separate program — the Home Reno Rebate Program — which may provide up to $5,000 for solar panels and an additional $5,000 for battery storage, subject to eligibility. Army Energy can help with both commercial and residential solar inquiries.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Can farms and greenhouses qualify for commercial solar incentives?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Agricultural operations including farms, greenhouses, and food processing facilities may be eligible to participate in the Save on Energy Retrofit Program as commercial participants, provided they meet the program's eligibility requirements. High seasonal energy demand in greenhouse operations can make solar PV particularly attractive. Contact Army Energy to discuss your specific situation and review eligibility.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          How long does the application process take?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Application timelines can vary depending on project complexity, documentation requirements, and program workload. In general, businesses should plan for several weeks to months for the full process including eligibility review, pre-approval, installation, and incentive payment. Starting early and ensuring all documentation is in order can help expedite the process.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          What documents do I need for a commercial solar incentive application?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Document requirements vary by program and project size but typically include business or property ownership documentation, utility account information, proposed system design and specifications, contractor information, and project cost estimates. After installation, you may need to submit invoices, installation certificates, and commissioning documentation. Army Energy can help guide you through the documentation process.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          What does "behind-the-meter" solar mean?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Behind-the-meter solar means the solar system is installed on your property and generates electricity that is consumed directly by your building, reducing the amount of electricity you need to purchase from the utility grid. The Save on Energy solar PV incentive is designed for behind-the-meter, load-displacement solar installations.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          Is funding guaranteed if I apply?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            No. Funding is not guaranteed. Incentives are subject to program approval, eligibility review, and funding availability. Program rules, amounts, and availability may change at any time. Army Energy recommends verifying current program details with the program administrator before making any investment decisions based on expected incentive support.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          How large does my system need to be to qualify for the per-kW solar incentive?
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Under the Save on Energy solar PV incentive structure, systems generally must be greater than 10kW-AC and up to 1MW-AC to qualify for the per-kW installed incentive. Systems outside this range may have different eligibility criteria. Always confirm current size requirements with the program administrator as these details are subject to change.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-bottom-cta">
+        <p>Have a question that isn't answered here?</p>
+        <a href="/contact" class="btn-primary">Contact Army Energy</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<script>
+  function toggleFaq(questionElement) {
+    const item = questionElement.closest(".faq-item");
+    const answer = item.querySelector(".faq-answer");
+    const toggle = item.querySelector(".faq-toggle");
+
+    const isOpen = item.classList.contains("active");
+
+    document.querySelectorAll(".faq-item").forEach(function(faq) {
+      faq.classList.remove("active");
+      faq.querySelector(".faq-answer").style.maxHeight = null;
+      faq.querySelector(".faq-toggle").textContent = "+";
+    });
+
+    if (!isOpen) {
+      item.classList.add("active");
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      toggle.textContent = "−";
+    }
+  }
+</script>
+
+{% endblock %}

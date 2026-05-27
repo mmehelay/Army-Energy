@@ -1,192 +1,527 @@
 ---
-title: "Reviews | Code Stitch Web Designs"
-description: "Meta description for the page"
-permalink: "/reviews/"
+title: "Incentives | Army Energy"
+description: "Ontario solar incentives and grants for commercial solar projects."
+permalink: "/Incentives/"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/reviews.css">
+<link rel="stylesheet" href="/assets/css/reviews.css">
 {% endblock %}
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
+<main id="page-incentives" class="incentives-page">
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Reviews</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/reviews/" class="cs-link cs-active">Reviews</a>
-            </div>
-        </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-tag">Ontario Solar Grants</div>
+
+      <h1>
+        INCENTIVES &<br>
+        <span class="accent">GRANTS</span>
+      </h1>
+
+      <p>
+        Understanding the Save on Energy Retrofit Program and other available
+        solar PV incentives for Ontario commercial, industrial, and institutional properties.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="/contact" class="btn-primary">Check Eligibility</a>
+        <a href="/commercial" class="btn-secondary">Commercial Solar</a>
+      </div>
     </div>
+  </section>
 
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews-67">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Our Reviews</span>
-                <h2 class="cs-title">Words From Our Customers</h2>
-                <p class="cs-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
-                </p>
-            </div>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 3 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 3 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, debitis!
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-                <!-- Review 3 -->
-                <li class="cs-item">
-                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="profile picture" width="80" height="80">
-                    <p class="cs-item-text">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <div class="cs-info">
-                        <div class="cs-flex-group">
-                            <span class="cs-name">Jon Doe</span>
-                            <span class="cs-desc">Homeowner</span>
-                        </div>
-                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
-                    </div>
-                </li>
-            </ul>
-            <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <strong>$860/kW</strong>
+          <span>Commercial Solar Incentives*</span>
         </div>
-    </section>
 
-    {% include 'sections/cta.html' %}
+        <div class="trust-item">
+          <strong>1MW</strong>
+          <span>Maximum Eligible System</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Pre-Approval</strong>
+          <span>Required Before Install</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Ontario Wide</strong>
+          <span>Commercial Eligibility</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN PROGRAM -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2 intro-grid">
+        <div>
+          <div class="section-tag">Main Program</div>
+
+          <div class="section-title">
+            SAVE ON ENERGY<br>
+            <span class="accent">RETROFIT PROGRAM</span>
+          </div>
+
+          <div class="gold-line"></div>
+
+          <p class="body-text">
+            The Save on Energy Retrofit Program helps Ontario businesses improve
+            energy efficiency, reduce operating costs, and lower greenhouse gas
+            emissions through incentives for eligible energy-efficiency upgrades,
+            including solar photovoltaic systems.
+          </p>
+
+          <div class="highlight-box">
+            <p>
+              <strong>Eligible businesses may qualify for significant incentive support</strong>
+              for targeted energy-efficiency retrofits. Applications are subject
+              to program approval and funding availability.
+            </p>
+          </div>
+
+          <div class="program-badge">Official Ontario Program</div>
+
+          <p class="program-link">
+            saveonenergy.ca/en/For-Business-and-Industry/
+          </p>
+        </div>
+
+        <div id="solar-pv">
+          <div class="solar-card">
+            <div class="section-tag">Solar PV Incentives</div>
+
+            <h3>SOLAR INCENTIVES FOR COMMERCIAL & INDUSTRIAL SYSTEMS</h3>
+
+            <p class="solar-subtitle">
+              For qualifying commercial solar projects:
+            </p>
+
+            <div class="solar-stats">
+              <div class="solar-stat">
+                <p>System Size</p>
+                <strong>Systems &gt;10kW-AC up to 1MW-AC</strong>
+              </div>
+
+              <div class="solar-stat gold-stat">
+                <p>Per kW Installed</p>
+                <strong>$860</strong>
+                <span>per kW-AC installed*</span>
+              </div>
+
+              <div class="solar-stat gold-stat">
+                <p>Max Potential</p>
+                <strong>$860K</strong>
+                <span>in incentives*</span>
+              </div>
+            </div>
+
+            <ul class="check-list">
+              <li>Incentives subject to program approval and funding availability</li>
+              <li>Pre-approvals are mandatory before installation</li>
+              <li>Additional tax advantages may be available</li>
+              <li>Eligibility requirements apply — confirm before proceeding</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAMPLE SAVINGS -->
+  <section class="section section-gray">
+    <div class="container">
+      <div class="text-center mb-40">
+        <div class="section-tag">Example Scenarios</div>
+
+        <div class="section-title">
+          HOW MUCH COULD YOUR<br>
+          <span class="accent">BUSINESS SAVE?</span>
+        </div>
+
+        <div class="gold-line center-line"></div>
+
+        <p class="section-subtext">
+          The following are example scenarios only. Actual incentive amounts
+          depend on project size, eligibility review, and program approval.
+        </p>
+      </div>
+
+      <div class="grid-4 savings-grid">
+        <div class="savings-card">
+          <div class="savings-card-header">
+            <div class="type">Small Commercial</div>
+            <h4>Retail / Small Office</h4>
+          </div>
+
+          <div class="savings-card-body">
+            <div class="savings-row">
+              <span class="label">System Size</span>
+              <span class="value">~30 kW-AC</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Incentive Rate</span>
+              <span class="value">$860/kW*</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Example Incentive</span>
+              <span class="value gold">~$25,800*</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Annual Savings</span>
+              <span class="value green">Varies</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="savings-card">
+          <div class="savings-card-header">
+            <div class="type">Medium Commercial</div>
+            <h4>Warehouse Project</h4>
+          </div>
+
+          <div class="savings-card-body">
+            <div class="savings-row">
+              <span class="label">System Size</span>
+              <span class="value">~150 kW-AC</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Incentive Rate</span>
+              <span class="value">$860/kW*</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Example Incentive</span>
+              <span class="value gold">~$129,000*</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Annual Savings</span>
+              <span class="value green">Varies</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="savings-card">
+          <div class="savings-card-header">
+            <div class="type">Large Industrial</div>
+            <h4>Manufacturing Facility</h4>
+          </div>
+
+          <div class="savings-card-body">
+            <div class="savings-row">
+              <span class="label">System Size</span>
+              <span class="value">~500 kW-AC</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Incentive Rate</span>
+              <span class="value">$860/kW*</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Example Incentive</span>
+              <span class="value gold">~$430,000*</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Annual Savings</span>
+              <span class="value green">Varies</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="savings-card featured-card">
+          <div class="savings-card-header gold-header">
+            <div class="type">Large Scale Project</div>
+            <h4>1MW System</h4>
+          </div>
+
+          <div class="savings-card-body">
+            <div class="savings-row">
+              <span class="label">System Size</span>
+              <span class="value">~1,000 kW-AC</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Incentive Rate</span>
+              <span class="value">$860/kW*</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Max Example</span>
+              <span class="value gold">~$860,000*</span>
+            </div>
+
+            <div class="savings-row">
+              <span class="label">Status</span>
+              <span class="value">Approval Required</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <p>
+          <strong>Important:</strong>
+          These figures are illustrative examples only and do not guarantee
+          eligibility or approval. Always confirm current program details
+          before proceeding.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELIGIBILITY -->
+  <section class="section section-dark" id="eligibility">
+    <div class="container">
+      <div class="text-center mb-40">
+        <div class="section-tag">Who Qualifies</div>
+
+        <div class="section-title text-white">
+          ELIGIBILITY<br>
+          <span class="accent">OVERVIEW</span>
+        </div>
+
+        <div class="gold-line center-line"></div>
+      </div>
+
+      <div class="grid-2 eligibility-grid">
+        <div>
+          <h4 class="dark-title">Eligible Participants</h4>
+
+          <ul class="check-list">
+            <li>Commercial property owners and businesses</li>
+            <li>Industrial facilities and manufacturers</li>
+            <li>Institutional organizations</li>
+            <li>Agricultural operations and greenhouse facilities</li>
+            <li>Participants must be LDC-billed electricity customers</li>
+            <li>Systems must generally be behind-the-meter</li>
+            <li>Systems greater than 10kW-AC up to 1MW-AC may qualify</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="dark-title">Key Requirements</h4>
+
+          <ul class="check-list">
+            <li>Pre-approval mandatory before installation</li>
+            <li>Work must be completed by a qualified contractor</li>
+            <li>Applications require documentation and eligibility review</li>
+            <li>Funding availability may change over time</li>
+            <li>Projects are subject to final approval</li>
+            <li>Program rules may change without notice</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATION PROCESS -->
+  <section class="section" id="application">
+    <div class="container">
+      <div class="text-center mb-40">
+        <div class="section-tag">Getting Started</div>
+
+        <div class="section-title">
+          THE APPLICATION<br>
+          <span class="accent">PROCESS</span>
+        </div>
+
+        <div class="gold-line center-line"></div>
+      </div>
+
+      <div class="grid-4 process-grid">
+        <div class="card">
+          <div class="card-icon">1</div>
+
+          <h3>Check Eligibility</h3>
+
+          <p>
+            Determine whether your property and proposed solar system meet
+            the program criteria.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">2</div>
+
+          <h3>Apply For Pre-Approval</h3>
+
+          <p>
+            Submit an application for incentive pre-approval before any
+            installation begins.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">3</div>
+
+          <h3>Complete Installation</h3>
+
+          <p>
+            Once pre-approval is confirmed, proceed with system design and
+            installation.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">4</div>
+
+          <h3>Submit & Receive Incentive</h3>
+
+          <p>
+            Submit invoices and required documentation after installation for review.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center cta-row">
+        <a href="/contact" class="btn-primary">Start Your Eligibility Review</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAVINGS CALCULATOR / SLIDER -->
+  <section class="section section-navy">
+    <div class="container">
+      <div class="text-center mb-40">
+        <div class="section-tag">Estimate Your Savings</div>
+
+        <div class="section-title text-white">
+          COMMERCIAL SOLAR<br>
+          <span class="accent">SAVINGS ESTIMATOR</span>
+        </div>
+
+        <div class="gold-line center-line"></div>
+
+        <p class="calc-subtext">
+          This estimator is for illustrative purposes only. Actual savings and
+          incentives depend on system size, eligibility review, and program approval.
+        </p>
+      </div>
+
+      <div class="calc-wrapper">
+        <div class="range-group">
+          <div class="range-label">
+            <span>Monthly Hydro Bill</span>
+            <span class="range-val" id="calcHydroVal">$15,000</span>
+          </div>
+
+          <input
+            type="range"
+            id="calcHydro"
+            min="1000"
+            max="50000"
+            step="500"
+            value="15000"
+            oninput="updateCalc()"
+          >
+        </div>
+
+        <div class="range-group">
+          <div class="range-label">
+            <span>Roof Area Available (sq ft)</span>
+            <span class="range-val" id="calcRoofVal">10,000 sq ft</span>
+          </div>
+
+          <input
+            type="range"
+            id="calcRoof"
+            min="2000"
+            max="50000"
+            step="1000"
+            value="10000"
+            oninput="updateCalc()"
+          >
+        </div>
+
+        <div class="calc-result">
+          <div class="calc-stat">
+            <span class="val" id="calcSystem">~200 kW</span>
+            <span class="lbl">Est. System Size</span>
+          </div>
+
+          <div class="calc-stat">
+            <span class="val" id="calcIncentive">~$172K</span>
+            <span class="lbl">Example Incentive*</span>
+          </div>
+
+          <div class="calc-stat">
+            <span class="val" id="calcAnnual">~$48K</span>
+            <span class="lbl">Est. Annual Savings</span>
+          </div>
+        </div>
+
+        <p class="calc-note">
+          *Example incentive based on $860/kW-AC rate. Subject to eligibility,
+          program approval, and funding availability.
+        </p>
+
+        <div class="text-center cta-row small">
+          <a href="/contact" class="btn-primary">Get A Real Estimate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <p class="disclaimer">
+    Incentive amounts, program availability, and eligibility requirements
+    are subject to change without notice. Always verify current program
+    details before proceeding. Army Energy is not affiliated with the
+    Ontario Government or Save on Energy.
+  </p>
+
+</main>
+
+<script>
+  function updateCalc() {
+    const hydro = document.getElementById("calcHydro");
+    const roof = document.getElementById("calcRoof");
+
+    if (!hydro || !roof) return;
+
+    const hydroVal = Number(hydro.value);
+    const roofVal = Number(roof.value);
+
+    const systemSize = Math.round(roofVal / 50);
+    const incentive = systemSize * 860;
+    const annualSavings = Math.round(hydroVal * 0.27 * 12);
+
+    document.getElementById("calcHydroVal").textContent =
+      "$" + hydroVal.toLocaleString();
+
+    document.getElementById("calcRoofVal").textContent =
+      roofVal.toLocaleString() + " sq ft";
+
+    document.getElementById("calcSystem").textContent =
+      "~" + systemSize.toLocaleString() + " kW";
+
+    document.getElementById("calcIncentive").textContent =
+      "~$" + Math.round(incentive / 1000).toLocaleString() + "K";
+
+    document.getElementById("calcAnnual").textContent =
+      "~$" + Math.round(annualSavings / 1000).toLocaleString() + "K";
+  }
+
+  document.addEventListener("DOMContentLoaded", updateCalc);
+</script>
 
 {% endblock %}

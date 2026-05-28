@@ -1,15 +1,34 @@
+
 <!-- ============================================ -->
 <!--                 Navigation                   -->
 <!-- ============================================ -->
 
 <header id="cs-navigation">
     <div class="cs-container">
+
+        <!-- Logo -->
+
         <a href="/" class="cs-logo" aria-label="back to home">
-            <img src="/assets/images/army-energy.png" alt="Army Energy logo" width="210" height="60" decoding="async">
+            <img 
+                src="/assets/images/army-energy.png"
+                alt="Army Energy logo"
+                width="210"
+                height="60"
+                decoding="async"
+            >
         </a>
 
+        <!-- Navigation -->
+
         <nav class="cs-nav" role="navigation">
-            <button class="cs-toggle" aria-label="mobile menu toggle" aria-expanded="false">
+
+            <!-- Mobile Menu Toggle -->
+
+            <button 
+                class="cs-toggle"
+                aria-label="mobile menu toggle"
+                aria-expanded="false"
+            >
                 <div class="cs-box" aria-hidden="true">
                     <span class="cs-line cs-line1"></span>
                     <span class="cs-line cs-line2"></span>
@@ -18,58 +37,203 @@
             </button>
 
             <div class="cs-ul-wrapper">
+
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+
+                    <!-- Home -->
+
                     <li class="cs-li">
-                        <a href="/" class="cs-li-link cs-active">Home</a>
+                        <a 
+                            href="/"
+                            class="cs-li-link {% if page.url == '/' %}cs-active{% endif %}"
+                        >
+                            Home
+                        </a>
                     </li>
 
+                    <!-- Commercial Dropdown -->
+
                     <li class="cs-li cs-dropdown">
-                        <button class="cs-li-link cs-dropdown-toggle" type="button">
+
+                        <button 
+                            class="cs-li-link cs-dropdown-toggle {% if page.url.startsWith('/commercial/') %}cs-active{% endif %}"
+                            type="button"
+                        >
                             Commercial Solar
-                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
+
+                            <img 
+                                class="cs-drop-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg"
+                                alt=""
+                                width="15"
+                                height="15"
+                                decoding="async"
+                                aria-hidden="true"
+                            >
                         </button>
 
                         <ul class="cs-drop-ul">
-                            <li class="cs-drop-li"><a href="/commercial/#warehouses" class="cs-li-link cs-drop-link">Warehouses</a></li>
-                            <li class="cs-drop-li"><a href="/commercial/#industrial" class="cs-li-link cs-drop-link">Industrial Buildings</a></li>
-                            <li class="cs-drop-li"><a href="/commercial/#farms" class="cs-li-link cs-drop-link">Farms & Greenhouses</a></li>
-                            <li class="cs-drop-li"><a href="/commercial/#retail" class="cs-li-link cs-drop-link">Retail Plazas</a></li>
-                            <li class="cs-drop-li"><a href="/commercial/#offices" class="cs-li-link cs-drop-link">Offices</a></li>
+
+                            <li class="cs-drop-li">
+                                <a 
+                                    href="/commercial/#warehouses"
+                                    class="cs-li-link cs-drop-link"
+                                >
+                                    Warehouses
+                                </a>
+                            </li>
+
+                            <li class="cs-drop-li">
+                                <a 
+                                    href="/commercial/#industrial"
+                                    class="cs-li-link cs-drop-link"
+                                >
+                                    Industrial Buildings
+                                </a>
+                            </li>
+
+                            <li class="cs-drop-li">
+                                <a 
+                                    href="/commercial/#farms"
+                                    class="cs-li-link cs-drop-link"
+                                >
+                                    Farms & Greenhouses
+                                </a>
+                            </li>
+
+                            <li class="cs-drop-li">
+                                <a 
+                                    href="/commercial/#retail"
+                                    class="cs-li-link cs-drop-link"
+                                >
+                                    Retail Plazas
+                                </a>
+                            </li>
+
+                            <li class="cs-drop-li">
+                                <a 
+                                    href="/commercial/#offices"
+                                    class="cs-li-link cs-drop-link"
+                                >
+                                    Offices
+                                </a>
+                            </li>
+
                         </ul>
+
                     </li>
+
+                    <!-- Incentives Dropdown -->
 
                     <li class="cs-li cs-dropdown">
-                        <button class="cs-li-link cs-dropdown-toggle" type="button">
+
+                        <button 
+                            class="cs-li-link cs-dropdown-toggle {% if page.url.startsWith('/incentives/') %}cs-active{% endif %}"
+                            type="button"
+                        >
                             Incentives & Grants
-                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
+
+                            <img 
+                                class="cs-drop-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg"
+                                alt=""
+                                width="15"
+                                height="15"
+                                decoding="async"
+                                aria-hidden="true"
+                            >
                         </button>
 
                         <ul class="cs-drop-ul">
-                            <li class="cs-drop-li"><a href="/incentives/" class="cs-li-link cs-drop-link">Save on Energy Retrofit Program</a></li>
-                            <li class="cs-drop-li"><a href="/incentives/#solar-pv" class="cs-li-link cs-drop-link">Solar PV Incentives</a></li>
-                            <li class="cs-drop-li"><a href="/incentives/#eligibility" class="cs-li-link cs-drop-link">Eligibility</a></li>
-                            <li class="cs-drop-li"><a href="/incentives/#application" class="cs-li-link cs-drop-link">Application Process</a></li>
+
+                            <li class="cs-drop-li">
+                                <a 
+                                    href="/incentives/"
+                                    class="cs-li-link cs-drop-link"
+                                >
+                                    Save on Energy Retrofit Program
+                                </a>
+                            </li>
+
+                            <li class="cs-drop-li">
+                                <a 
+                                    href="/incentives/#solar-pv"
+                                    class="cs-li-link cs-drop-link"
+                                >
+                                    Solar PV Incentives
+                                </a>
+                            </li>
+
+                            <li class="cs-drop-li">
+                                <a 
+                                    href="/incentives/#eligibility"
+                                    class="cs-li-link cs-drop-link"
+                                >
+                                    Eligibility
+                                </a>
+                            </li>
+
+                            <li class="cs-drop-li">
+                                <a 
+                                    href="/incentives/#application"
+                                    class="cs-li-link cs-drop-link"
+                                >
+                                    Application Process
+                                </a>
+                            </li>
+
                         </ul>
+
                     </li>
 
-                    <li class="cs-li">
-                        <a href="/residential/" class="cs-li-link">Residential Solar</a>
-                    </li>
+                    <!-- Residential -->
 
                     <li class="cs-li">
-                        <a href="/faq/" class="cs-li-link">FAQ</a>
+                        <a 
+                            href="/residential/"
+                            class="cs-li-link {% if page.url.startsWith('/Residential/') %}cs-active{% endif %}"
+                        >
+                            Residential Solar
+                        </a>
                     </li>
 
+                    <!-- FAQ -->
+
                     <li class="cs-li">
-                        <a href="/contact/" class="cs-li-link">Contact Us</a>
+                        <a 
+                            href="/faq/"
+                            class="cs-li-link {% if page.url.startsWith('/FAQ/') %}cs-active{% endif %}"
+                        >
+                            FAQ
+                        </a>
                     </li>
+
+                    <!-- Contact -->
+
+                    <li class="cs-li">
+                        <a 
+                            href="/contact/"
+                            class="cs-li-link {% if page.url.startsWith('/contact/') %}cs-active{% endif %}"
+                        >
+                            Contact Us
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
         </nav>
 
-        <a href="/contact/" class="cs-button-outline">Check Eligibility</a>
+        <!-- CTA Button -->
+
+        <a href="/contact/" class="cs-button-outline">
+            Check Eligibility
+        </a>
 
     </div>
-</header>              
+</header>
+
+             
                                 
                                 

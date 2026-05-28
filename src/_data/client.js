@@ -1,6 +1,6 @@
 module.exports = {
     name: "Army Energy",
-    email: "info@armyenergy.ca",
+    email: "info@armyelectric.com",
     phoneForTel: "647-229-7005",
     phoneFormatted: "(647) 229-7005",
     address: {
@@ -13,11 +13,10 @@ module.exports = {
         mapLink: "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6",
     },
     socials: {
-        facebook: "https://www.facebook.com/",
-        instagram: "https://www.instagram.com/",
+        instagram: "https://www.instagram.com/armyelectric/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    domain: "https://www.example.com",
+    domain: "https://army-energy.com",
     // Passing the isProduction variable for use in HTML templates
     isProduction: process.env.ELEVENTY_ENV === "PROD",
 };

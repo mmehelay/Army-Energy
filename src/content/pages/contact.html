@@ -14,89 +14,196 @@ permalink: "/contact/"
 
 {% block body %}
 
-   <!-- ============================================ -->
+<!-- ============================================ -->
 <!--                   Banner                     -->
 <!-- ============================================ -->
 
 <section id="contact-banner">
     <div class="cs-container">
-      <div class="section-tag">Contact Army Energy</div>
-      <h1>GET IN<br><span class="accent">TOUCH</span></h1>
-      <p>Speak with Army Energy about commercial solar, residential solar, incentives, and project eligibility.</p>
+        <div class="section-tag">Contact Army Energy</div>
+
+        <h1>
+            GET IN<br>
+            <span class="accent">TOUCH</span>
+        </h1>
+
+        <p>
+            Speak with Army Energy about commercial solar,
+            residential solar, incentives, and project eligibility.
+        </p>
     </div>
-  </section>
-  
-  <!-- ============================================ -->
-  <!--                   Contact                    -->
-  <!-- ============================================ -->
-  
-  <section id="contact-568">
+</section>
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-568">
     <div class="cs-container">
-  
-      <div class="cs-left">
-        <div class="cs-content">
-          <span class="cs-topper">Contact Us</span>
-          <h2 class="cs-title">Start Your Solar Project</h2>
-          <p class="cs-text">
-            Fill out the form below and Army Energy will contact you to review your property, solar goals, and available incentive opportunities.
-          </p>
+
+        <!-- Left Side -->
+        <div class="cs-left">
+            <div class="cs-content">
+                <span class="cs-topper">Contact Us</span>
+
+                <h2 class="cs-title">
+                    Start Your Solar Project
+                </h2>
+
+                <p class="cs-text">
+                    Fill out the form below and Army Energy will contact
+                    you to review your property, solar goals,
+                    and available incentive opportunities.
+                </p>
+            </div>
+
+            <!-- Netlify Form -->
+            <form
+                class="cs-form"
+                id="cs-form-568"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify
+            >
+
+                <!-- Required Hidden Input -->
+                <input type="hidden" name="form-name" value="contact">
+
+                <!-- Optional Spam Protection -->
+                <p hidden>
+                    <label>
+                        Don’t fill this out:
+                        <input name="bot-field">
+                    </label>
+                </p>
+
+                <label class="cs-label">
+                    Name
+
+                    <input
+                        class="cs-input"
+                        required
+                        type="text"
+                        id="name-568"
+                        name="name"
+                        placeholder="Your name"
+                    >
+                </label>
+
+                <label class="cs-label">
+                    Phone
+
+                    <input
+                        class="cs-input"
+                        required
+                        type="tel"
+                        id="phone-568"
+                        name="phone"
+                        placeholder="647-000-0000"
+                    >
+                </label>
+
+                <label class="cs-label">
+                    Email
+
+                    <input
+                        class="cs-input"
+                        required
+                        type="email"
+                        id="email-568"
+                        name="email"
+                        placeholder="you@email.com"
+                    >
+                </label>
+
+                <label class="cs-label">
+                    Project Type
+
+                    <select
+                        class="cs-input"
+                        id="project-568"
+                        name="project"
+                        required
+                    >
+                        <option value="">
+                            Select project type
+                        </option>
+
+                        <option value="Commercial Solar">
+                            Commercial Solar
+                        </option>
+
+                        <option value="Residential Solar">
+                            Residential Solar
+                        </option>
+
+                        <option value="Solar Incentives / Grants">
+                            Solar Incentives / Grants
+                        </option>
+
+                        <option value="Battery Storage">
+                            Battery Storage
+                        </option>
+
+                        <option value="Not Sure Yet">
+                            Not Sure Yet
+                        </option>
+                    </select>
+                </label>
+
+                <label class="cs-label cs-message">
+                    Message
+
+                    <textarea
+                        class="cs-input cs-textarea"
+                        required
+                        name="message"
+                        id="message-568"
+                        placeholder="Tell us about your property, hydro bill, roof space, or project goals..."
+                    ></textarea>
+                </label>
+
+                <button class="cs-submit" type="submit">
+                    Send Message
+                </button>
+            </form>
         </div>
-  
-        <form class="cs-form" id="cs-form-568" name="Contact Form" method="post">
-          <label class="cs-label">
-            Name
-            <input class="cs-input" required type="text" id="name-568" name="name" placeholder="Your name">
-          </label>
-  
-          <label class="cs-label">
-            Phone
-            <input class="cs-input" required type="tel" id="phone-568" name="phone" placeholder="647-000-0000">
-          </label>
-  
-          <label class="cs-label">
-            Email
-            <input class="cs-input" required type="email" id="email-568" name="email" placeholder="you@email.com">
-          </label>
-  
-          <label class="cs-label">
-            Project Type
-            <select class="cs-input" id="project-568" name="project" required>
-              <option value="">Select project type</option>
-              <option>Commercial Solar</option>
-              <option>Residential Solar</option>
-              <option>Solar Incentives / Grants</option>
-              <option>Battery Storage</option>
-              <option>Not Sure Yet</option>
-            </select>
-          </label>
-  
-          <label class="cs-label cs-message">
-            Message
-            <textarea class="cs-input cs-textarea" required name="message" id="message-568" placeholder="Tell us about your property, hydro bill, roof space, or project goals..."></textarea>
-          </label>
-  
-          <button class="cs-submit" type="submit">Send Message</button>
-        </form>
-      </div>
-  
-      <div class="cs-right">
-        <span class="cs-header">Phone</span>
-        <a href="tel:6472297005" class="cs-link cs-phone">647-229-7005</a>
-  
-        <span class="cs-header">Email</span>
-        <a href="mailto:info@armyenergy.com" class="cs-link">info@armyenergy.com</a>
-  
-        <span class="cs-header">Service Area</span>
-        <p class="cs-info">Residential and commercial solar projects across Ontario.</p>
-  
-        <div class="cs-mini-card">
-          <strong>Free Project Assessment</strong>
-          <p>We review your property, usage, incentive options, and next steps.</p>
+
+        <!-- Right Side -->
+        <div class="cs-right">
+
+            <span class="cs-header">Phone</span>
+
+            <a href="tel:6472297005" class="cs-link cs-phone">
+                647-229-7005
+            </a>
+
+            <span class="cs-header">Email</span>
+
+            <a href="mailto:info@armyelectric.com" class="cs-link">
+                info@armyelectric.com
+            </a>
+
+            <span class="cs-header">Service Area</span>
+
+            <p class="cs-info">
+                Residential and commercial solar projects
+                across Ontario.
+            </p>
+
+            <div class="cs-mini-card">
+                <strong>Free Project Assessment</strong>
+
+                <p>
+                    We review your property, usage,
+                    incentive options, and next steps.
+                </p>
+            </div>
+
         </div>
-      </div>
-  
     </div>
-  </section>
-                                
+</section>
 
 {% endblock %}
+

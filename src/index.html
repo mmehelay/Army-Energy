@@ -1,6 +1,7 @@
+
 ---
-title: "Army Energy | Commercial & Residential Solar Solutions Ontario"
-description: "Army Energy provides commercial and residential solar solutions across Ontario, including solar panel installations, battery storage, and incentive guidance for businesses and homeowners."
+title: "Army Energy | Commercial Solar & Energy Infrastructure Ontario"
+description: "Army Energy provides commercial solar, electrical infrastructure, smart metering, and grid-connected energy solutions across Ontario."
 permalink: "/"
 tags: "sitemap"
 ---
@@ -8,23 +9,16 @@ tags: "sitemap"
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <!-- Critical styles are loaded first -->
     <link rel="stylesheet" href="/assets/css/critical.css" />
 
-    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
     {% if client.isProduction %}
         <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link rel="stylesheet" href="/assets/css/local.css">
         </noscript>
-
     {% else %}
         <link rel="stylesheet" href="/assets/css/local.css" />
     {% endif %}
-
-    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
-    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
-    <!-- {% include "components/home-schema.html" %} -->
 {% endblock %}
 
 {% block body %}
@@ -34,28 +28,34 @@ tags: "sitemap"
         <div class="cs-content">
             <div class="cs-topper-box">
                 <span class="cs-dot"></span>
-                <span class="cs-topper">Residential & Commercial Energy Contractor</span>
+                <span class="cs-topper">
+                    Commercial • Industrial • Utility-Scale Energy Infrastructure
+                </span>
             </div>
 
             <h1 class="cs-title">
-                Powering Homes<br>
-                & Businesses With<br>
-                <span class="cs-color">Smart Solar</span><br>
-                Solutions
+                Engineered Energy<br>
+                Infrastructure<br>
+                <span class="cs-color">Built In-House</span>
             </h1>
 
             <p class="cs-text">
-                Army Energy helps Ontario homeowners and businesses plan, install, and upgrade solar energy systems built for long-term savings, reliable performance, and available incentive opportunities. From first assessment to final installation, our team guides the full project.
+                Army Energy, a Division of Army Electric Inc., delivers commercial solar, electrical infrastructure, smart metering, and grid-connected energy solutions across Ontario.
             </p>
 
             <div class="cs-button-group">
-                <a href="/contact/" class="cs-button-solid">● Request a Free Project Assessment</a>
-                <a href="/contact/" class="cs-button-outline">Speak With a Solar Contractor</a>
+                <a href="/contact/" class="cs-button-solid">
+                    Request a Project Assessment
+                </a>
+
+                <a href="/contact/" class="cs-button-outline">
+                    Discuss Your Energy Infrastructure Project
+                </a>
             </div>
 
             <div class="cs-countdown">
                 <div class="cs-countdown-label">
-                    Current Ontario Solar Incentive Window — Funding Availability May Change
+                    Ontario Incentive & Utility Funding Opportunities
                 </div>
 
                 <div class="cs-countdown-timer">
@@ -87,7 +87,7 @@ tags: "sitemap"
                 </div>
 
                 <p class="cs-countdown-note">
-                    Incentive programs and funding amounts can change over time. Start with a project assessment to understand your solar options, eligibility, and estimated savings before moving forward.
+                    Current incentive programs and utility-backed funding opportunities remain available for qualifying commercial and institutional projects while allocation windows remain open.
                 </p>
             </div>
         </div>
@@ -95,26 +95,26 @@ tags: "sitemap"
         <div class="cs-trust-bar">
             <div class="cs-trust-item">
                 <span class="cs-trust-icon">●</span>
-                <span>Residential & Commercial Contractor</span>
-            </div>
-
-            <div class="cs-trust-item">
-                <span class="cs-trust-icon">☀</span>
-                <span>Solar PV Installation</span>
-            </div>
-
-            <div class="cs-trust-item">
-                <span class="cs-trust-icon">✓</span>
-                <span>Project Assessment</span>
-            </div>
-
-            <div class="cs-trust-item">
-                <span class="cs-trust-icon">▤</span>
-                <span>Incentive Guidance</span>
+                <span>Commercial Solar Infrastructure</span>
             </div>
 
             <div class="cs-trust-item">
                 <span class="cs-trust-icon">⚡</span>
+                <span>In-House Licensed Electricians</span>
+            </div>
+
+            <div class="cs-trust-item">
+                <span class="cs-trust-icon">✓</span>
+                <span>Utility Coordination Expertise</span>
+            </div>
+
+            <div class="cs-trust-item">
+                <span class="cs-trust-icon">▤</span>
+                <span>Smart Metering & Energy Integration</span>
+            </div>
+
+            <div class="cs-trust-item">
+                <span class="cs-trust-icon">☎</span>
                 <span>647-229-7005</span>
             </div>
         </div>
@@ -123,9 +123,18 @@ tags: "sitemap"
     <picture class="cs-background">
         <source media="(max-width: 600px)" srcset="/assets/images/solar-panels.jpg">
         <source media="(min-width: 601px)" srcset="/assets/images/solar-panels.jpg">
-        <img src="/assets/images/solar-panels.jpg" alt="solar panels" width="1920" height="1080" loading="eager" decoding="async">
+
+        <img 
+            src="/assets/images/solar-panels.jpg"
+            alt="commercial solar energy infrastructure"
+            width="1920"
+            height="1080"
+            loading="eager"
+            decoding="async"
+        >
     </picture>
 </section>
+
 <!-- ============================================ -->
 <!--              Why Choose Section              -->
 <!-- ============================================ -->
@@ -134,62 +143,85 @@ tags: "sitemap"
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Why Choose Army Energy</span>
+
             <h2 class="cs-title">
-                Contractor-Led Solar Projects <span class="cs-color">Built For Long-Term Value.</span>
+                Built by Electricians.
+                <span class="cs-color">Engineered for Performance.</span>
             </h2>
+
             <div class="cs-gold-line"></div>
         </div>
 
         <div class="cs-wrapper">
             <div class="cs-left">
                 <p class="cs-text">
-                    Army Energy works with homeowners, business owners, and property managers to design practical solar energy solutions that fit the property, budget, and energy goals. We focus on real project planning, proper installation, and long-term performance — not just selling panels.
+                    Unlike sales-driven solar companies, Army Energy brings real electrical infrastructure experience to every project. Our team supports commercial, industrial, institutional, and utility-scale energy systems with a focus on engineered planning, in-house execution, utility coordination, and long-term system performance.
                 </p>
 
                 <div class="cs-highlight">
                     <p>
-                        “From residential rooftops to commercial facilities, Army Energy helps customers turn unused roof space into a reliable energy asset.”
+                        “We are the infrastructure team behind serious energy projects — built with real electrical expertise, utility experience, and long-term performance in mind.”
                     </p>
                 </div>
 
                 <ul class="cs-check-list">
-                    <li>Residential and commercial solar project support</li>
-                    <li>Site assessments and system planning</li>
-                    <li>Solar PV installation guidance</li>
-                    <li>Energy-efficiency upgrade recommendations</li>
-                    <li>Help understanding Ontario incentive opportunities</li>
-                    <li>Long-term savings-focused project design</li>
+                    <li>Commercial and utility-scale energy infrastructure expertise</li>
+                    <li>In-house licensed electricians and project teams</li>
+                    <li>Engineering-led planning and execution</li>
+                    <li>Grid-connected system and utility coordination experience</li>
+                    <li>Smart metering and energy integration capability</li>
+                    <li>Industrial-grade safety, commissioning, and compliance standards</li>
                 </ul>
             </div>
 
             <div class="cs-stats-grid">
                 <div class="cs-stat-card">
-                    <span class="cs-stat">50%</span>
-                    <p>Eligible commercial projects may qualify for up to 50% of eligible project costs through available programs.</p>
+                    <span class="cs-stat">80MW+</span>
+
+                    <p>
+                        Leadership experience contributing to solar energy systems connected to Ontario’s electrical grid.
+                    </p>
                 </div>
 
                 <div class="cs-stat-card">
-                    <span class="cs-stat">$860</span>
-                    <p>Commercial solar incentives may be available based on system size, eligibility, and program approval.</p>
+                    <span class="cs-stat">2014</span>
+
+                    <p>
+                        Renewable energy and electrical infrastructure experience supporting projects across Ontario.
+                    </p>
                 </div>
 
                 <div class="cs-stat-card">
-                    <span class="cs-stat">$0</span>
-                    <p>Start with a free project assessment and incentive review.</p>
+                    <span class="cs-stat">In-House</span>
+
+                    <p>
+                        Self-performing electrical teams focused on quality control, safety, and long-term reliability.
+                    </p>
                 </div>
 
                 <div class="cs-stat-card">
-                    <span class="cs-stat">30%</span>
-                    <p>Federal clean technology tax credits may apply for eligible projects. Confirm with a tax professional.</p>
+                    <span class="cs-stat">Ontario</span>
+
+                    <p>
+                        Experience supporting commercial, industrial, institutional, and utility-connected energy projects across the province.
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="cs-button-wrap">
-            <a href="/commercial/" class="cs-button-solid">View Our Solar Contractor Services</a>
+            <a href="/commercial/" class="cs-button-solid">
+                Explore Energy Infrastructure Services
+            </a>
         </div>
     </div>
 </section>
+
+
+
+<!-- Keep everything you already had above -->
+
+<!-- Add the full page sections after the Why Choose section -->
 
 <!-- ============================================ -->
 <!--                 Process                      -->
@@ -198,28 +230,28 @@ tags: "sitemap"
 <section id="army-process">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Simple Process</span>
-            <h2 class="cs-title">Our Project <span class="cs-color">Process</span></h2>
+            <span class="cs-topper">Project Delivery</span>
+            <h2 class="cs-title">Our Energy Infrastructure <span class="cs-color">Process</span></h2>
             <div class="cs-gold-line"></div>
         </div>
 
         <div class="cs-process-box">
             <div class="cs-step">
                 <div class="cs-step-number">1</div>
-                <h3>Property & Energy Assessment</h3>
-                <p>We review your property type, roof space, hydro usage, and project goals to understand if solar is a good fit.</p>
+                <h3>Feasibility & Energy Assessment</h3>
+                <p>We review your property, electrical infrastructure, hydro usage, utility requirements, and project goals to determine system feasibility.</p>
             </div>
 
             <div class="cs-step">
                 <div class="cs-step-number">2</div>
-                <h3>System Planning & Incentive Review</h3>
-                <p>We help estimate system size, project potential, and available incentive opportunities before the work begins.</p>
+                <h3>Engineering & Project Planning</h3>
+                <p>Our team develops the project scope, system planning, incentive pathway, utility coordination requirements, and installation strategy.</p>
             </div>
 
             <div class="cs-step">
                 <div class="cs-step-number">3</div>
-                <h3>Project Installation & Support</h3>
-                <p>Army Energy guides the project from planning to installation support, helping make the process clear and organized.</p>
+                <h3>Installation, Commissioning & Support</h3>
+                <p>Army Energy supports construction, electrical integration, testing, commissioning, and closeout with a focus on long-term reliability.</p>
             </div>
         </div>
     </div>
@@ -233,51 +265,63 @@ tags: "sitemap"
     <div class="cs-container">
         <div class="cs-wrapper">
             <div class="cs-content">
-                <span class="cs-topper">Residential & Commercial Services</span>
+                <span class="cs-topper">Commercial & Utility-Scale Solutions</span>
                 <h2 class="cs-title">
-                    Solar Contractor Services <span class="cs-color">For Ontario Properties</span>
+                    Energy Infrastructure Solutions <span class="cs-color">Across Ontario</span>
                 </h2>
                 <div class="cs-gold-line"></div>
                 <p class="cs-text">
-                    Army Energy works with homeowners, commercial buildings, warehouses, farms, plazas, offices, and institutional properties looking to reduce energy costs and invest in long-term solar power.
+                    Army Energy supports commercial buildings, institutions, industrial facilities, utility-scale sites, farms, plazas, offices, and select residential properties with solar and smart energy infrastructure.
                 </p>
             </div>
 
             <div class="cs-service-grid">
                 <div class="cs-service-card">
                     <div class="cs-card-icon">🏢</div>
-                    <h3>Warehouses</h3>
-                    <p>Large rooftops can be used for high-output commercial solar systems that help reduce operating costs.</p>
+                    <h3>Commercial Solar Infrastructure</h3>
+                    <p>Engineered rooftop and integrated solar systems designed to reduce long-term operating costs for commercial facilities.</p>
+                </div>
+
+                <div class="cs-service-card">
+                    <div class="cs-card-icon">🏛️</div>
+                    <h3>Institutional Energy Systems</h3>
+                    <p>Energy infrastructure solutions for schools, healthcare facilities, municipal properties, and institutional buildings.</p>
                 </div>
 
                 <div class="cs-service-card">
                     <div class="cs-card-icon">🏭</div>
-                    <h3>Industrial</h3>
-                    <p>Energy-heavy facilities can benefit from solar planning designed around usage, demand, and long-term savings.</p>
+                    <h3>Industrial Power Solutions</h3>
+                    <p>Electrical and renewable energy systems designed for high-demand industrial operations and manufacturing facilities.</p>
                 </div>
 
                 <div class="cs-service-card">
-                    <div class="cs-card-icon">🌱</div>
-                    <h3>Farms & Greenhouses</h3>
-                    <p>Agricultural properties can use solar to support daily operations and reduce electricity expenses.</p>
+                    <div class="cs-card-icon">☀️</div>
+                    <h3>Utility & Ground Mount Solar</h3>
+                    <p>Large-scale ground mount and utility-connected solar infrastructure projects built for long-term energy production.</p>
                 </div>
 
                 <div class="cs-service-card">
-                    <div class="cs-card-icon">🏬</div>
-                    <h3>Retail Plazas</h3>
-                    <p>Multi-unit commercial properties can explore solar options for common-area and building energy use.</p>
+                    <div class="cs-card-icon">▤</div>
+                    <h3>Smart Metering & Energy Integration</h3>
+                    <p>Advanced energy monitoring, metering, and system integration solutions designed to improve operational efficiency.</p>
                 </div>
 
                 <div class="cs-service-card">
-                    <div class="cs-card-icon">🏢</div>
-                    <h3>Office Buildings</h3>
-                    <p>Office properties can use rooftop solar to improve efficiency and lower monthly utility costs.</p>
+                    <div class="cs-card-icon">🔋</div>
+                    <h3>Battery Storage & Smart Energy</h3>
+                    <p>Battery storage and smart energy systems designed to support resiliency, peak demand management, and future scalability.</p>
+                </div>
+
+                <div class="cs-service-card">
+                    <div class="cs-card-icon">🚗</div>
+                    <h3>EV Infrastructure</h3>
+                    <p>Commercial EV charging infrastructure and electrical upgrades for fleet and property electrification.</p>
                 </div>
 
                 <div class="cs-service-card">
                     <div class="cs-card-icon">🏠</div>
-                    <h3>Homes & Institutions</h3>
-                    <p>Army Energy also supports residential properties and larger institutional energy projects.</p>
+                    <h3>Residential Solar Solutions</h3>
+                    <p>Residential solar support for homeowners seeking long-term energy savings through professionally planned systems.</p>
                 </div>
             </div>
         </div>
@@ -291,44 +335,44 @@ tags: "sitemap"
 <section id="army-incentives">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Incentive Support</span>
+            <span class="cs-topper">Incentive & Funding Guidance</span>
             <h2 class="cs-title">
-                Solar Projects With Incentive <span class="cs-color">Guidance Built In.</span>
+                Strategic Incentive Support <span class="cs-color">Built Into Project Planning.</span>
             </h2>
             <div class="cs-gold-line"></div>
             <p class="cs-text">
-                Army Energy helps customers understand available Ontario and federal solar incentive opportunities as part of the project planning process. Incentives are subject to eligibility, program rules, funding availability, and approval.
+                Army Energy helps clients understand available Ontario and federal incentive opportunities as part of early-stage project planning. Incentives are subject to eligibility, program rules, funding availability, utility approval, and project-specific requirements.
             </p>
         </div>
 
         <div class="cs-incentive-grid">
             <div class="cs-dark-card">
                 <div class="cs-card-icon">△</div>
-                <h3>Save on Energy Programs</h3>
-                <p>Retrofit Program for commercial, industrial, and institutional properties.</p>
+                <h3>Utility-Backed Program Guidance</h3>
+                <p>Support identifying available programs for qualifying commercial, industrial, and institutional energy projects.</p>
             </div>
 
             <div class="cs-dark-card">
                 <div class="cs-card-icon">$</div>
-                <h3>Ontario Energy Efficiency Incentives</h3>
-                <p>Province-wide programs to support eligible energy-efficiency upgrades.</p>
+                <h3>Project Incentive Positioning</h3>
+                <p>Early-stage project planning can help align system scope, utility coordination, and funding timelines.</p>
             </div>
 
             <div class="cs-dark-card">
                 <div class="cs-card-icon">🏭</div>
-                <h3>Federal Clean Technology Tax Credits</h3>
-                <p>Up to 30% federal investment tax credit — subject to eligibility and CPA review.</p>
+                <h3>Clean Technology Tax Credits</h3>
+                <p>Federal clean technology tax credits may apply to eligible projects. Confirm eligibility with a qualified tax professional.</p>
             </div>
 
             <div class="cs-dark-card">
                 <div class="cs-card-icon">📈</div>
                 <h3>Capital Cost Allowance</h3>
-                <p>Accelerated CCA opportunities may be available for eligible solar installations.</p>
+                <p>Accelerated capital cost allowance opportunities may be available for eligible solar and energy infrastructure investments.</p>
             </div>
         </div>
 
         <div class="cs-button-wrap">
-            <a href="/incentives/" class="cs-button-solid">Explore Incentives & Grants</a>
+            <a href="/incentives/" class="cs-button-solid">Explore Incentives & Funding Options</a>
         </div>
     </div>
 </section>
@@ -341,35 +385,35 @@ tags: "sitemap"
     <div class="cs-container">
         <div class="cs-wrapper">
             <div class="cs-content">
-                <span class="cs-topper">Free Project Assessment</span>
+                <span class="cs-topper">Project Assessment</span>
                 <h2 class="cs-title">
-                    Start Your Solar Project <span class="cs-color">With A Contractor-Led Assessment</span>
+                    Discuss Your Energy Infrastructure <span class="cs-color">Project With Our Team</span>
                 </h2>
                 <div class="cs-gold-line"></div>
                 <p class="cs-text">
-                    Whether you own a home, warehouse, plaza, farm, office, or industrial facility, Army Energy can help review your project and explain what solar options may work for your property.
+                    Whether you are planning a commercial rooftop installation, institutional energy upgrade, industrial power project, utility-scale development, or smart energy system, Army Energy can help assess the opportunity and outline the next steps.
                 </p>
 
                 <div class="cs-mini-steps">
                     <div class="cs-mini-step">
                         <span>1</span>
-                        <p>Submit your property and energy details</p>
+                        <p>Submit your property, facility, and energy details</p>
                     </div>
 
                     <div class="cs-mini-step">
                         <span>2</span>
-                        <p>We review your solar project potential</p>
+                        <p>We review project feasibility, infrastructure needs, and incentive opportunities</p>
                     </div>
 
                     <div class="cs-mini-step">
                         <span>3</span>
-                        <p>We guide you through next steps, incentive options, and installation planning</p>
+                        <p>Our team outlines the next steps for planning, utility coordination, and implementation</p>
                     </div>
                 </div>
             </div>
 
             <form class="cs-form">
-                <h3>Request a Free Solar Project Assessment</h3>
+                <h3>Request a Project Assessment</h3>
 
                 <div class="cs-form-grid">
                     <label>
@@ -397,12 +441,14 @@ tags: "sitemap"
                     Property Type
                     <select>
                         <option>Select property type</option>
+                        <option>Commercial Building</option>
                         <option>Warehouse / Distribution</option>
                         <option>Industrial / Manufacturing</option>
+                        <option>Institutional Facility</option>
                         <option>Farm / Greenhouse</option>
                         <option>Retail Plaza</option>
                         <option>Office Building</option>
-                        <option>Institutional</option>
+                        <option>Ground Mount / Utility-Scale Site</option>
                         <option>Residential</option>
                     </select>
                 </label>
@@ -419,10 +465,10 @@ tags: "sitemap"
                     </select>
                 </label>
 
-                <button type="submit" class="cs-button-solid">Request My Solar Project Assessment</button>
+                <button type="submit" class="cs-button-solid">Request My Project Assessment</button>
 
                 <p class="cs-form-note">
-                    By submitting, you consent to Army Energy contacting you about solar incentive programs. No obligation.
+                    By submitting, you consent to Army Energy contacting you about your solar or energy infrastructure project. No obligation.
                 </p>
             </form>
         </div>
@@ -436,14 +482,14 @@ tags: "sitemap"
 <section id="army-testimonials">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">What Clients Say</span>
-            <h2 class="cs-title">Contractor <span class="cs-color">Results</span></h2>
+            <span class="cs-topper">Project Confidence</span>
+            <h2 class="cs-title">Infrastructure-Focused <span class="cs-color">Results</span></h2>
             <div class="cs-gold-line"></div>
         </div>
 
         <div class="cs-testimonial-grid">
             <div class="cs-testimonial">
-                <p>“Army Energy helped us understand the full solar project, from roof space to system size and incentive options. The process felt clear from the beginning.”</p>
+                <p>“Army Energy helped us understand the full project, from electrical infrastructure to system planning and incentive options. The process felt clear from the beginning.”</p>
                 <div class="cs-author">
                     <div class="cs-avatar">RK</div>
                     <div>
@@ -454,7 +500,7 @@ tags: "sitemap"
             </div>
 
             <div class="cs-testimonial">
-                <p>“Our facility had high monthly hydro costs, and Army Energy helped us explore a commercial solar system that made sense for our building.”</p>
+                <p>“Our facility had high monthly hydro costs, and Army Energy helped us explore a commercial energy system that made sense for our building and operations.”</p>
                 <div class="cs-author">
                     <div class="cs-avatar">MT</div>
                     <div>
@@ -465,7 +511,7 @@ tags: "sitemap"
             </div>
 
             <div class="cs-testimonial">
-                <p>“We wanted a contractor who could explain the project properly, not just sell panels. Army Energy helped us understand our options and next steps.”</p>
+                <p>“We wanted an energy infrastructure team that could explain the project properly, not just sell panels. Army Energy helped us understand our options and next steps.”</p>
                 <div class="cs-author">
                     <div class="cs-avatar">JD</div>
                     <div>
@@ -477,4 +523,40 @@ tags: "sitemap"
         </div>
     </div>
 </section>
+
+<script>
+    const countdownDate = new Date("December 31, 2026 23:59:59").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        if (distance <= 0) {
+            document.getElementById("cd-days").textContent = "000";
+            document.getElementById("cd-hours").textContent = "00";
+            document.getElementById("cd-mins").textContent = "00";
+            document.getElementById("cd-secs").textContent = "00";
+            clearInterval(countdownInterval);
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((distance / (1000 * 60)) % 60);
+        const seconds = Math.floor((distance / 1000) % 60);
+
+        document.getElementById("cd-days").textContent = String(days).padStart(3, "0");
+        document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
+        document.getElementById("cd-mins").textContent = String(minutes).padStart(2, "0");
+        document.getElementById("cd-secs").textContent = String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+    const countdownInterval = setInterval(updateCountdown, 1000);
+</script>
+
 {% endblock %}
+
+
+
+

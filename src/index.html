@@ -377,6 +377,7 @@ tags: "sitemap"
     </div>
 </section>
 
+
 <!-- ============================================ -->
 <!--              Quote / Contact                 -->
 <!-- ============================================ -->
@@ -384,96 +385,254 @@ tags: "sitemap"
 <section id="army-quote">
     <div class="cs-container">
         <div class="cs-wrapper">
+
             <div class="cs-content">
                 <span class="cs-topper">Project Assessment</span>
+
                 <h2 class="cs-title">
-                    Discuss Your Energy Infrastructure <span class="cs-color">Project With Our Team</span>
+                    Discuss Your Energy Infrastructure
+                    <span class="cs-color">Project With Our Team</span>
                 </h2>
+
                 <div class="cs-gold-line"></div>
+
                 <p class="cs-text">
-                    Whether you are planning a commercial rooftop installation, institutional energy upgrade, industrial power project, utility-scale development, or smart energy system, Army Energy can help assess the opportunity and outline the next steps.
+                    Whether you are planning a commercial rooftop installation,
+                    institutional energy upgrade, industrial power project,
+                    utility-scale development, or smart energy system,
+                    Army Energy can help assess the opportunity
+                    and outline the next steps.
                 </p>
 
                 <div class="cs-mini-steps">
+
                     <div class="cs-mini-step">
                         <span>1</span>
-                        <p>Submit your property, facility, and energy details</p>
+
+                        <p>
+                            Submit your property, facility,
+                            and energy details
+                        </p>
                     </div>
 
                     <div class="cs-mini-step">
                         <span>2</span>
-                        <p>We review project feasibility, infrastructure needs, and incentive opportunities</p>
+
+                        <p>
+                            We review project feasibility,
+                            infrastructure needs,
+                            and incentive opportunities
+                        </p>
                     </div>
 
                     <div class="cs-mini-step">
                         <span>3</span>
-                        <p>Our team outlines the next steps for planning, utility coordination, and implementation</p>
+
+                        <p>
+                            Our team outlines the next steps
+                            for planning, utility coordination,
+                            and implementation
+                        </p>
                     </div>
+
                 </div>
             </div>
 
-            <form class="cs-form">
+            <!-- Netlify Form -->
+            <form
+                class="cs-form"
+                name="project-assessment"
+                method="POST"
+                data-netlify="true"
+                netlify
+            >
+
+                <!-- Required Hidden Input -->
+                <input
+                    type="hidden"
+                    name="form-name"
+                    value="project-assessment"
+                >
+
+                <!-- Spam Protection -->
+                <p hidden>
+                    <label>
+                        Don’t fill this out:
+                        <input name="bot-field">
+                    </label>
+                </p>
+
                 <h3>Request a Project Assessment</h3>
 
                 <div class="cs-form-grid">
+
                     <label>
                         First Name
-                        <input type="text" placeholder="John">
+
+                        <input
+                            type="text"
+                            name="first-name"
+                            placeholder="John"
+                            required
+                        >
                     </label>
 
                     <label>
                         Last Name
-                        <input type="text" placeholder="Smith">
+
+                        <input
+                            type="text"
+                            name="last-name"
+                            placeholder="Smith"
+                            required
+                        >
                     </label>
+
                 </div>
 
                 <label>
                     Business Name
-                    <input type="text" placeholder="Your Company Inc.">
+
+                    <input
+                        type="text"
+                        name="business-name"
+                        placeholder="Your Company Inc."
+                    >
+                </label>
+
+                <label>
+                    Email Address
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="info@company.com"
+                        required
+                    >
                 </label>
 
                 <label>
                     Phone Number
-                    <input type="tel" placeholder="647-000-0000">
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="647-000-0000"
+                        required
+                    >
                 </label>
 
                 <label>
                     Property Type
-                    <select>
-                        <option>Select property type</option>
-                        <option>Commercial Building</option>
-                        <option>Warehouse / Distribution</option>
-                        <option>Industrial / Manufacturing</option>
-                        <option>Institutional Facility</option>
-                        <option>Farm / Greenhouse</option>
-                        <option>Retail Plaza</option>
-                        <option>Office Building</option>
-                        <option>Ground Mount / Utility-Scale Site</option>
-                        <option>Residential</option>
+
+                    <select
+                        name="property-type"
+                        required
+                    >
+                        <option value="">
+                            Select property type
+                        </option>
+
+                        <option value="Commercial Building">
+                            Commercial Building
+                        </option>
+
+                        <option value="Warehouse / Distribution">
+                            Warehouse / Distribution
+                        </option>
+
+                        <option value="Industrial / Manufacturing">
+                            Industrial / Manufacturing
+                        </option>
+
+                        <option value="Institutional Facility">
+                            Institutional Facility
+                        </option>
+
+                        <option value="Farm / Greenhouse">
+                            Farm / Greenhouse
+                        </option>
+
+                        <option value="Retail Plaza">
+                            Retail Plaza
+                        </option>
+
+                        <option value="Office Building">
+                            Office Building
+                        </option>
+
+                        <option value="Ground Mount / Utility-Scale Site">
+                            Ground Mount / Utility-Scale Site
+                        </option>
+
+                        <option value="Residential">
+                            Residential
+                        </option>
                     </select>
                 </label>
 
                 <label>
                     Est. Monthly Hydro Bill
-                    <select>
-                        <option>Select range</option>
-                        <option>Under $1,000/month</option>
-                        <option>$1,000 – $5,000/month</option>
-                        <option>$5,000 – $15,000/month</option>
-                        <option>$15,000 – $40,000/month</option>
-                        <option>Over $40,000/month</option>
+
+                    <select
+                        name="hydro-bill"
+                        required
+                    >
+                        <option value="">
+                            Select range
+                        </option>
+
+                        <option value="Under $1,000/month">
+                            Under $1,000/month
+                        </option>
+
+                        <option value="$1,000 – $5,000/month">
+                            $1,000 – $5,000/month
+                        </option>
+
+                        <option value="$5,000 – $15,000/month">
+                            $5,000 – $15,000/month
+                        </option>
+
+                        <option value="$15,000 – $40,000/month">
+                            $15,000 – $40,000/month
+                        </option>
+
+                        <option value="Over $40,000/month">
+                            Over $40,000/month
+                        </option>
                     </select>
                 </label>
 
-                <button type="submit" class="cs-button-solid">Request My Project Assessment</button>
+                <label>
+                    Project Details
+
+                    <textarea
+                        name="message"
+                        rows="5"
+                        placeholder="Tell us about your facility, energy usage, project goals, or timeline..."
+                    ></textarea>
+                </label>
+
+                <button
+                    type="submit"
+                    class="cs-button-solid"
+                >
+                    Request My Project Assessment
+                </button>
 
                 <p class="cs-form-note">
-                    By submitting, you consent to Army Energy contacting you about your solar or energy infrastructure project. No obligation.
+                    By submitting, you consent to Army Energy contacting you
+                    about your solar or energy infrastructure project.
+                    No obligation.
                 </p>
+
             </form>
+
         </div>
     </div>
 </section>
+
 
 <!-- ============================================ -->
 <!--                Testimonials                  -->

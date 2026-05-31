@@ -398,99 +398,96 @@ permalink: "/incentives/"
     </div>
   </section>
 
-  <!-- SAVINGS CALCULATOR / SLIDER -->
-  <section class="section section-navy">
-    <div class="container">
-      <div class="text-center mb-40">
-        <div class="section-tag">Estimate Your Savings</div>
+<!-- INCENTIVE ESTIMATOR / SLIDER -->
+<section class="section section-navy">
+  <div class="container">
+    <div class="text-center mb-40">
+      <div class="section-tag">Project Qualification Tool</div>
 
-        <div class="section-title text-white">
-          COMMERCIAL SOLAR<br>
-          <span class="accent">SAVINGS ESTIMATOR</span>
-        </div>
-
-        <div class="gold-line center-line"></div>
-
-        <p class="calc-subtext">
-          This estimator is for illustrative purposes only. Actual savings and
-          incentives depend on system size, eligibility review, and program approval.
-        </p>
+      <div class="section-title text-white">
+        SOLAR PROJECT<br>
+        <span class="accent">PROJECT ESTIMATOR</span>
       </div>
 
-      <div class="calc-wrapper">
-        <div class="range-group">
-          <div class="range-label">
-            <span>Monthly Hydro Bill</span>
-            <span class="range-val" id="calcHydroVal">$5,000</span>
-          </div>
-      
-          <input
-            type="range"
-            id="calcHydro"
-            min="5000"
-            max="80000"
-            step="1000"
-            value="5000"
-            oninput="updateCalc()"
-          >
-        </div>
-      
+      <div class="gold-line center-line"></div>
 
-        <div class="range-group">
-          <div class="range-label">
-            <span>Roof Area Available (sq ft)</span>
-            <span class="range-val" id="calcRoofVal">25,000 sq ft</span>
-          </div>
-        
-          <input
-            type="range"
-            id="calcRoof"
-            min="25000"
-            max="1000000"
-            step="5000"
-            value="25000"
-            oninput="updateCalc()"
-          >
+      <p class="calc-subtext">
+        Provide your approximate monthly hydro bill and available roof area to
+  explore the potential size of a commercial solar installation and available
+  incentive funding. Final project economics, system sizing, and incentive
+  eligibility require a detailed site assessment.
+      </p>
+    </div>
+
+    <div class="calc-wrapper">
+      <div class="range-group">
+        <div class="range-label">
+          <span>Monthly Hydro Bill</span>
+          <span class="range-val" id="calcHydroVal">$5,000</span>
         </div>
 
-        <div class="calc-result">
-          <div class="calc-stat">
-            <span class="val" id="calcSystem">~200 kW</span>
-            <span class="lbl">Est. System Size</span>
-          </div>
+        <input
+          type="range"
+          id="calcHydro"
+          min="5000"
+          max="80000"
+          step="1000"
+          value="5000"
+          oninput="updateCalc()"
+        >
+      </div>
 
-          <div class="calc-stat">
-            <span class="val" id="calcIncentive">~$172K</span>
-            <span class="lbl">Example Incentive*</span>
-          </div>
-
-          <div class="calc-stat">
-            <span class="val" id="calcAnnual">~$48K</span>
-            <span class="lbl">Est. Annual Savings</span>
-          </div>
+      <div class="range-group">
+        <div class="range-label">
+          <span>Roof Area Available (sq ft)</span>
+          <span class="range-val" id="calcRoofVal">25,000 sq ft</span>
         </div>
 
-        <p class="calc-note">
-          *Example incentive based on $860/kW-AC rate. Subject to eligibility,
-          program approval, and funding availability.
-        </p>
+        <input
+          type="range"
+          id="calcRoof"
+          min="25000"
+          max="1000000"
+          step="5000"
+          value="25000"
+          oninput="updateCalc()"
+        >
+      </div>
 
-        <div class="text-center cta-row small">
-          <a href="/contact" class="btn-primary">Get A Real Estimate</a>
+      <div class="calc-result">
+        <div class="calc-stat">
+          <span class="val" id="calcSystem">~250 kW</span>
+          <span class="lbl">System Size</span>
         </div>
+
+        <div class="calc-stat">
+          <span class="val" id="calcIncentive">~$215K</span>
+          <span class="lbl">Potential Incentive*</span>
+        </div>
+      </div>
+
+      <p class="calc-note">
+        *Potential incentive amount is based on an example incentive rate of
+        $860/kW-AC and is provided for illustration only. Final funding amounts
+        depend on utility territory, program requirements, engineering review,
+        system design, eligibility requirements, and approval by the applicable
+        incentive provider.
+      </p>
+
+      <div class="text-center cta-row small">
+        <a href="/contact" class="btn-primary">Get A Free Project Assessment</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- DISCLAIMER -->
-  <p class="disclaimer">
-    Incentive amounts, program availability, and eligibility requirements
-    are subject to change without notice. Always verify current program
-    details before proceeding. Army Energy is not affiliated with the
-    Ontario Government or Save on Energy.
-  </p>
-
-</main>
+<!-- DISCLAIMER -->
+<p class="disclaimer">
+  Incentive amounts, program availability, and eligibility requirements
+  are subject to change without notice. Always verify current program
+  details before proceeding. Army Energy is not affiliated with the
+  Ontario Government or Save on Energy.
+</p>
 
 <script>
   function updateCalc() {
@@ -504,22 +501,28 @@ permalink: "/incentives/"
 
     const systemSize = Math.round(roofVal / 100);
     const incentive = systemSize * 860;
-    const annualSavings = Math.round(hydroVal * 0.27 * 12 * 2);
 
-    document.getElementById("calcHydroVal").textContent =
-      "$" + hydroVal.toLocaleString();
+    const hydroOutput = document.getElementById("calcHydroVal");
+    const roofOutput = document.getElementById("calcRoofVal");
+    const systemOutput = document.getElementById("calcSystem");
+    const incentiveOutput = document.getElementById("calcIncentive");
 
-    document.getElementById("calcRoofVal").textContent =
-      roofVal.toLocaleString() + " sq ft";
+    if (hydroOutput) {
+      hydroOutput.textContent = "$" + hydroVal.toLocaleString();
+    }
 
-    document.getElementById("calcSystem").textContent =
-      "~" + systemSize.toLocaleString() + " kW";
+    if (roofOutput) {
+      roofOutput.textContent = roofVal.toLocaleString() + " sq ft";
+    }
 
-    document.getElementById("calcIncentive").textContent =
-      "~$" + Math.round(incentive / 1000).toLocaleString() + "K";
+    if (systemOutput) {
+      systemOutput.textContent = "~" + systemSize.toLocaleString() + " kW";
+    }
 
-    document.getElementById("calcAnnual").textContent =
-      "~$" + Math.round(annualSavings / 1000).toLocaleString() + "K";
+    if (incentiveOutput) {
+      incentiveOutput.textContent =
+        "~$" + Math.round(incentive / 1000).toLocaleString() + "K";
+    }
   }
 
   document.addEventListener("DOMContentLoaded", updateCalc);

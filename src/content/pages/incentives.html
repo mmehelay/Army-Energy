@@ -421,33 +421,34 @@ permalink: "/incentives/"
         <div class="range-group">
           <div class="range-label">
             <span>Monthly Hydro Bill</span>
-            <span class="range-val" id="calcHydroVal">$15,000</span>
+            <span class="range-val" id="calcHydroVal">$5,000</span>
           </div>
-
+      
           <input
             type="range"
             id="calcHydro"
-            min="1000"
-            max="50000"
-            step="500"
-            value="15000"
+            min="5000"
+            max="80000"
+            step="1000"
+            value="5000"
             oninput="updateCalc()"
           >
         </div>
+      
 
         <div class="range-group">
           <div class="range-label">
             <span>Roof Area Available (sq ft)</span>
-            <span class="range-val" id="calcRoofVal">10,000 sq ft</span>
+            <span class="range-val" id="calcRoofVal">25,000 sq ft</span>
           </div>
-
+        
           <input
             type="range"
             id="calcRoof"
-            min="2000"
-            max="50000"
-            step="1000"
-            value="10000"
+            min="25000"
+            max="1000000"
+            step="5000"
+            value="25000"
             oninput="updateCalc()"
           >
         </div>
@@ -501,9 +502,9 @@ permalink: "/incentives/"
     const hydroVal = Number(hydro.value);
     const roofVal = Number(roof.value);
 
-    const systemSize = Math.round(roofVal / 50);
+    const systemSize = Math.round(roofVal / 100);
     const incentive = systemSize * 860;
-    const annualSavings = Math.round(hydroVal * 0.27 * 12);
+    const annualSavings = Math.round(hydroVal * 0.27 * 12 * 2);
 
     document.getElementById("calcHydroVal").textContent =
       "$" + hydroVal.toLocaleString();

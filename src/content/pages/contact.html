@@ -20,44 +20,40 @@ permalink: "/contact/"
 
 <section id="contact-banner">
     <div class="cs-container">
-        <div class="section-tag">Contact Army Energy</div>
+        <div class="section-tag">Contact Solar Company in Ontario</div>
 
         <h1>
-            GET IN<br>
-            <span class="accent">TOUCH</span>
+            START YOUR<br>
+            <span class="accent">SOLAR PROJECT</span>
         </h1>
 
         <p>
-            Speak with Army Energy about commercial solar,
-            residential solar, incentives, and project eligibility.
+            Contact Army Energy to discuss commercial solar installation,
+            residential solar panels, battery storage, EV charging, and
+            Ontario solar incentive opportunities in Toronto, the GTA, and
+            across Ontario.
         </p>
     </div>
 </section>
 
-<!-- ============================================ -->
-<!--                   Contact                    -->
-<!-- ============================================ -->
-
 <section id="contact-568">
     <div class="cs-container">
 
-        <!-- Left Side -->
         <div class="cs-left">
             <div class="cs-content">
-                <span class="cs-topper">Contact Us</span>
+                <span class="cs-topper">Request a Solar Assessment</span>
 
                 <h2 class="cs-title">
-                    Start Your Solar Project
+                    Contact Army Energy for Solar Installation in Ontario
                 </h2>
 
                 <p class="cs-text">
-                    Fill out the form below and Army Energy will contact
-                    you to review your property, solar goals,
-                    and available incentive opportunities.
+                    Fill out the form and our team will review your property,
+                    hydro usage, project type, roof space, battery storage needs,
+                    and available Ontario solar incentive pathways.
                 </p>
             </div>
 
-            <!-- Netlify Form -->
             <form
                 class="cs-form"
                 id="cs-form-568"
@@ -66,11 +62,8 @@ permalink: "/contact/"
                 data-netlify="true"
                 netlify
             >
-
-                <!-- Required Hidden Input -->
                 <input type="hidden" name="form-name" value="contact">
 
-                <!-- Optional Spam Protection -->
                 <p hidden>
                     <label>
                         Don’t fill this out:
@@ -118,6 +111,18 @@ permalink: "/contact/"
                 </label>
 
                 <label class="cs-label">
+                    Property Location
+
+                    <input
+                        class="cs-input"
+                        type="text"
+                        id="location-568"
+                        name="property-location"
+                        placeholder="Toronto, Mississauga, Brampton, etc."
+                    >
+                </label>
+
+                <label class="cs-label">
                     Project Type
 
                     <select
@@ -130,24 +135,74 @@ permalink: "/contact/"
                             Select project type
                         </option>
 
-                        <option value="Commercial Solar">
-                            Commercial Solar
+                        <option value="Commercial Solar Installation">
+                            Commercial Solar Installation
                         </option>
 
-                        <option value="Residential Solar">
-                            Residential Solar
+                        <option value="Residential Solar Panels">
+                            Residential Solar Panels
                         </option>
 
-                        <option value="Solar Incentives / Grants">
-                            Solar Incentives / Grants
+                        <option value="Industrial Solar Project">
+                            Industrial Solar Project
+                        </option>
+
+                        <option value="Farm / Greenhouse Solar">
+                            Farm / Greenhouse Solar
+                        </option>
+
+                        <option value="Solar Incentives / Rebates">
+                            Solar Incentives / Rebates
                         </option>
 
                         <option value="Battery Storage">
                             Battery Storage
                         </option>
 
+                        <option value="EV Charging Infrastructure">
+                            EV Charging Infrastructure
+                        </option>
+
                         <option value="Not Sure Yet">
                             Not Sure Yet
+                        </option>
+                    </select>
+                </label>
+
+                <label class="cs-label">
+                    Monthly Hydro Bill
+
+                    <select
+                        class="cs-input"
+                        id="hydro-568"
+                        name="monthly-hydro-bill"
+                    >
+                        <option value="">
+                            Select approximate range
+                        </option>
+
+                        <option value="Under $500/month">
+                            Under $500/month
+                        </option>
+
+                        <option value="$500 – $1,500/month">
+                            $500 – $1,500/month
+                        </option>
+
+                        <option value="$1,500 – $5,000/month">
+                            $1,500 – $5,000/month
+                        </option>
+
+                        <option value="$5,000 – $15,000/month">
+                            $5,000 – $15,000/month
+                        </option>
+
+                        <option value="$15,000 – $40,000/month">
+                            $15,000 – $40,000/month
+                        </option>
+
+                        <option value="Over $40,000/month">
+                            Over $40,000/month
                         </option>
                     </select>
                 </label>
@@ -160,17 +215,16 @@ permalink: "/contact/"
                         required
                         name="message"
                         id="message-568"
-                        placeholder="Tell us about your property, hydro bill, roof space, or project goals..."
+                        placeholder="Tell us about your property type, hydro bill, roof space, solar goals, battery storage needs, or incentive questions..."
                     ></textarea>
                 </label>
 
                 <button class="cs-submit" type="submit">
-                    Send Message
+                    Request My Solar Assessment
                 </button>
             </form>
         </div>
 
-        <!-- Right Side -->
         <div class="cs-right">
 
             <span class="cs-header">Phone</span>
@@ -188,16 +242,29 @@ permalink: "/contact/"
             <span class="cs-header">Service Area</span>
 
             <p class="cs-info">
-                Residential and commercial solar projects
+                Solar installation and energy infrastructure services in Toronto,
+                Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville,
+                Burlington, Hamilton, Kitchener, Waterloo, London, Ottawa, and
                 across Ontario.
             </p>
 
             <div class="cs-mini-card">
-                <strong>Free Project Assessment</strong>
+                <strong>Free Solar Project Assessment</strong>
 
                 <p>
-                    We review your property, usage,
-                    incentive options, and next steps.
+                    We review your property, hydro usage, available roof or land
+                    area, commercial or residential solar goals, battery storage
+                    options, and Ontario solar incentive opportunities.
+                </p>
+            </div>
+
+            <div class="cs-mini-card">
+                <strong>Solar Services</strong>
+
+                <p>
+                    Commercial solar, residential solar panels, industrial solar,
+                    farm and greenhouse solar, battery storage, EV charging, and
+                    incentive guidance.
                 </p>
             </div>
 
@@ -206,4 +273,3 @@ permalink: "/contact/"
 </section>
 
 {% endblock %}
-

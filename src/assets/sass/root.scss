@@ -653,7 +653,9 @@
             }
         }
 
-        .cs-button-outline {
+        .cs-button-outline,
+        .cs-header-actions,
+        .cs-company-badge {
             display: none;
         }
     }
@@ -819,11 +821,48 @@
             }
         }
 
+        .cs-header-actions {
+            display: flex;
+            align-items: center;
+            gap: calc(12 / 16 * 1rem);
+            flex-shrink: 0;
+        }
+
+        .cs-company-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: calc(12 / 16 * 1rem) calc(20 / 16 * 1rem);
+            border: 1px solid rgba(212, 160, 23, 0.35);
+            border-radius: calc(30 / 16 * 1rem);
+            background: rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: calc(15 / 16 * 1rem);
+            font-weight: 600;
+            line-height: 1;
+            white-space: nowrap;
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.3s;
+
+            strong {
+                color: var(--primary);
+                font-weight: 700;
+                margin-left: calc(4 / 16 * 1rem);
+            }
+
+            &:hover {
+                background: rgba(212, 160, 23, 0.12);
+                border-color: var(--primary);
+                color: #fff;
+                transform: translateY(-1px);
+            }
+        }
+
         .cs-button-outline {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: calc(14 / 16 * 1rem) calc(24 / 16 * 1rem);
+            padding: calc(12 / 16 * 1rem) calc(20 / 16 * 1rem);
             border: 1px solid rgba(255, 255, 255, 0.28);
             border-radius: calc(30 / 16 * 1rem);
             background: rgba(255, 255, 255, 0.04);
@@ -831,6 +870,8 @@
             text-decoration: none;
             font-size: calc(15 / 16 * 1rem);
             font-weight: 700;
+            line-height: 1;
+            white-space: nowrap;
             transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 
             &:hover {

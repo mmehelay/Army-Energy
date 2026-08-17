@@ -110,7 +110,7 @@ permalink: "/photos/"
 
           <div class="sp-modal__badges">
             <span id="spModalStatus">In Progress</span>
-            <span id="spModalType">Solar Panel Work</span>
+            <span id="spModalType">Photovoltaic Power Plant</span>
           </div>
 
           <div class="sp-modal__meta">
@@ -129,12 +129,12 @@ permalink: "/photos/"
           </div>
 
           <div class="sp-modal__copy">
-            <h4>Project Overview</h4>
+            <h4>Electrical Contractor of Record</h4>
             <p id="spModalDescription"></p>
           </div>
 
           <div class="sp-modal__scope">
-            <h4>What Is Being Worked On</h4>
+            <h4>Project Scope</h4>
             <p id="spModalScopeIntro"></p>
             <ul id="spModalScopeList"></ul>
           </div>
@@ -177,10 +177,15 @@ permalink: "/photos/"
     "9446 MCGLAUGHLIN DRONE ASSETS"
   ];
 
-  return {
+
+  const projects = projectNames.map((name, index) => {
+    const profile = workProfiles[index % workProfiles.length];
+    const id = String(index + 1).padStart(2, "0");
+
+    return {
   id,
   title: `Photovoltaic Power Plant #${id}`,
-  subtext: `Photovoltaic Power Plant #${id}`,
+  subtext: name,
   projectType: "Photovoltaic Power Plant",
   status: profile.status,
   workType: profile.workType,
@@ -208,43 +213,6 @@ permalink: "/photos/"
     }
   ]
 };
-
-  const projects = projectNames.map((name, index) => {
-    const profile = workProfiles[index % workProfiles.length];
-    const id = String(index + 1).padStart(2, "0");
-
-    return {
-      id,
-      title: name,
-      subtext: `Solar panel work site ${id}`,
-      projectType: "Solar Panel Work",
-      status: profile.status,
-      workType: profile.workType,
-      scopeTitle: profile.scopeTitle,
-      description: profile.description,
-      scopeIntro: profile.scopeIntro,
-      scopeItems: profile.scopeItems,
-      caption: profile.caption,
-      thumbnail: `/assets/images/solar-projects/project-${id}/cover.JPG`,
-      media: [
-        {
-          type: "image",
-          src: `/assets/images/solar-projects/project-${id}/cover.JPG`,
-          alt: `${name} cover image`
-        },
-        {
-          type: "image",
-          src: `/assets/images/solar-projects/project-${id}/detail-1.JPG`,
-          alt: `${name} detail image`
-        },
-        {
-          type: "video",
-          src: `https://pub-fcfb498991a14ed7b061963859c3fe66.r2.dev/project-${id}/Video-poster.mp4`,
-          poster: `/assets/images/solar-projects/project-${id}/cover.JPG`
-        }
-      ]
-    };
-  });
 
   const grid = document.getElementById("spProjectGrid");
   const modal = document.getElementById("spProjectModal");
@@ -324,7 +292,7 @@ permalink: "/photos/"
                 </div>
 
                 <div class="sp-card__scope">
-                  <span>What Is Being Worked On</span>
+                  <span>Project Scope</span>
                   <p>${project.scopeTitle}</p>
                 </div>
 

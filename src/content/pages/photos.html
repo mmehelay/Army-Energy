@@ -1,0 +1,486 @@
+---
+title: "Solar Energy Projects & Solar Panel Installation Portfolio | Army Energy"
+description: "Explore 17 featured solar energy projects by Army Energy, including solar panel installations, system upgrades, electrical work, and ongoing solar builds across Ontario."
+permalink: "/photos/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/project-two.css">
+{% endblock %}
+
+{% block body %}
+
+<main class="sahal-solar-portfolio">
+  <section class="sp-hero">
+    <div class="sp-container">
+      <div class="sp-hero__grid">
+        <div class="sp-hero__content">
+          <p class="sp-eyebrow">ARMY ENERGY | SOLAR ENERGY PROJECT PORTFOLIO</p>
+          <h1>Army Energy Solar Panel Installation Portfolio</h1>
+          <p>
+            Explore 17 featured solar energy project sites from Army Energy, showcasing commercial and
+            residential solar panel installations, system upgrades, electrical work, and ongoing solar
+            energy builds across Ontario. These featured projects represent only a portion of the many
+            solar projects Army Energy has completed and continues to build. View project photos, videos,
+            installation progress, and details about the solar work completed at each site.
+          </p>
+
+          <div class="sp-hero__stats">
+            <article>
+              <strong>17</strong>
+              <span>Featured Project Sites</span>
+            </article>
+            <article>
+              <strong>Photo + Video</strong>
+              <span>Project Media</span>
+            </article>
+            <article>
+              <strong>Growing Portfolio</strong>
+              <span>More Solar Builds Underway</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="sp-hero__card">
+          <div class="sp-hero__card-header">
+            <span class="sp-hero__dot"></span>
+            <span class="sp-hero__dot"></span>
+            <span class="sp-hero__dot"></span>
+          </div>
+          <div class="sp-hero__card-body">
+            <div class="sp-hero__mock-media"></div>
+            <div class="sp-hero__mock-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sp-gallery">
+    <div class="sp-container">
+      <div class="sp-section-head">
+        <p class="sp-eyebrow">ALL PROJECTS</p>
+        <h2>Solar Work by Address</h2>
+        <p>
+          Click any site card to open its full media post with address, photos, video, work scope, and
+          project notes.
+        </p>
+      </div>
+
+      <div class="sp-grid" id="spProjectGrid"></div>
+    </div>
+  </section>
+
+  <div class="sp-modal" id="spProjectModal" aria-hidden="true">
+    <div class="sp-modal__backdrop" data-close-modal></div>
+
+    <div class="sp-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="spModalTitle">
+      <button class="sp-modal__close" type="button" aria-label="Close project" data-close-modal>&times;</button>
+
+      <div class="sp-modal__layout">
+        <div class="sp-modal__media">
+          <button class="sp-modal__nav sp-modal__nav--prev" id="spPrevMedia" type="button" aria-label="Previous media">
+            &#10094;
+          </button>
+
+          <div class="sp-modal__media-stage" id="spMediaStage"></div>
+
+          <button class="sp-modal__nav sp-modal__nav--next" id="spNextMedia" type="button" aria-label="Next media">
+            &#10095;
+          </button>
+
+          <div class="sp-modal__dots" id="spMediaDots"></div>
+        </div>
+
+        <aside class="sp-modal__sidebar">
+          <div class="sp-modal__listing-head">
+            <div class="sp-modal__avatar" id="spModalAvatar">S</div>
+            <div>
+              <p class="sp-modal__eyebrow">SOLAR PROJECT SITE</p>
+              <h3 id="spModalTitle">Site Address</h3>
+              <p class="sp-modal__location" id="spModalSubtext">Project details</p>
+            </div>
+          </div>
+
+          <div class="sp-modal__badges">
+            <span id="spModalStatus">In Progress</span>
+            <span id="spModalType">Solar Panel Work</span>
+          </div>
+
+          <div class="sp-modal__meta">
+            <article>
+              <strong id="spModalCode">01</strong>
+              <span>Project ID</span>
+            </article>
+            <article>
+              <strong id="spModalWorkType">Installation</strong>
+              <span>Work Type</span>
+            </article>
+            <article>
+              <strong id="spModalMediaCount">3</strong>
+              <span>Media Items</span>
+            </article>
+          </div>
+
+          <div class="sp-modal__copy">
+            <h4>Project Overview</h4>
+            <p id="spModalDescription"></p>
+          </div>
+
+          <div class="sp-modal__scope">
+            <h4>What Is Being Worked On</h4>
+            <p id="spModalScopeIntro"></p>
+            <ul id="spModalScopeList"></ul>
+          </div>
+
+          <div class="sp-modal__caption">
+            <p class="sp-modal__caption-label">Post Caption</p>
+            <p id="spModalCaption"></p>
+          </div>
+
+          <div class="sp-modal__footer">
+            <button class="sp-modal__property-btn" id="spPrevProject" type="button">Previous Site</button>
+            <button class="sp-modal__property-btn sp-modal__property-btn--primary" id="spNextProject" type="button">
+              Next Site
+            </button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  const projectNames = [
+    "11 Dansk Court Etobicoke Ontario",
+    "12 Fisherman Drive Brampton Ontario",
+    "50 KIRKHAM DRONE ASSETS",
+    "61 RAYETTE DRONE ASSETS",
+    "80 WESTCREEK DRONE ASSETS",
+    "100 WESTCREEK DRONE ASSETS",
+    "101 WICKSTEED DRONE ASSETS",
+    "120 BAYVIEW DRONE ASSETS",
+    "130 ROYAL CREST DRONE ASSETS",
+    "155 CHERRY TREE DRONE ASSETS",
+    "200 ROMINA DRONE ASSETS",
+    "218 WILKINSON DRONE ASSETS",
+    "251 MCMURCHY DRONE ASSETS",
+    "1983 KIPLING DRONE ASSETS",
+    "2365 CREDIT VALLEY DRONE ASSETS",
+    "3255 HAVENWOOD DRONE ASSETS",
+    "9446 MCGLAUGHLIN DRONE ASSETS"
+  ];
+
+  return {
+  id,
+  title: `Photovoltaic Power Plant #${id}`,
+  subtext: `Photovoltaic Power Plant #${id}`,
+  projectType: "Photovoltaic Power Plant",
+  status: profile.status,
+  workType: profile.workType,
+  scopeTitle: profile.scopeTitle,
+  description: profile.description,
+  scopeIntro: profile.scopeIntro,
+  scopeItems: profile.scopeItems,
+  caption: profile.caption,
+  thumbnail: `/assets/images/solar-projects/project-${id}/cover.JPG`,
+  media: [
+    {
+      type: "image",
+      src: `/assets/images/solar-projects/project-${id}/cover.JPG`,
+      alt: `Photovoltaic Power Plant #${id} cover image`
+    },
+    {
+      type: "image",
+      src: `/assets/images/solar-projects/project-${id}/detail-1.JPG`,
+      alt: `Photovoltaic Power Plant #${id} detail image`
+    },
+    {
+      type: "video",
+      src: `https://pub-fcfb498991a14ed7b061963859c3fe66.r2.dev/project-${id}/Video-poster.mp4`,
+      poster: `/assets/images/solar-projects/project-${id}/cover.JPG`
+    }
+  ]
+};
+
+  const projects = projectNames.map((name, index) => {
+    const profile = workProfiles[index % workProfiles.length];
+    const id = String(index + 1).padStart(2, "0");
+
+    return {
+      id,
+      title: name,
+      subtext: `Solar panel work site ${id}`,
+      projectType: "Solar Panel Work",
+      status: profile.status,
+      workType: profile.workType,
+      scopeTitle: profile.scopeTitle,
+      description: profile.description,
+      scopeIntro: profile.scopeIntro,
+      scopeItems: profile.scopeItems,
+      caption: profile.caption,
+      thumbnail: `/assets/images/solar-projects/project-${id}/cover.JPG`,
+      media: [
+        {
+          type: "image",
+          src: `/assets/images/solar-projects/project-${id}/cover.JPG`,
+          alt: `${name} cover image`
+        },
+        {
+          type: "image",
+          src: `/assets/images/solar-projects/project-${id}/detail-1.JPG`,
+          alt: `${name} detail image`
+        },
+        {
+          type: "video",
+          src: `https://pub-fcfb498991a14ed7b061963859c3fe66.r2.dev/project-${id}/Video-poster.mp4`,
+          poster: `/assets/images/solar-projects/project-${id}/cover.JPG`
+        }
+      ]
+    };
+  });
+
+  const grid = document.getElementById("spProjectGrid");
+  const modal = document.getElementById("spProjectModal");
+  const mediaStage = document.getElementById("spMediaStage");
+  const mediaDots = document.getElementById("spMediaDots");
+
+  const modalTitle = document.getElementById("spModalTitle");
+  const modalSubtext = document.getElementById("spModalSubtext");
+  const modalStatus = document.getElementById("spModalStatus");
+  const modalType = document.getElementById("spModalType");
+  const modalCode = document.getElementById("spModalCode");
+  const modalWorkType = document.getElementById("spModalWorkType");
+  const modalMediaCount = document.getElementById("spModalMediaCount");
+  const modalDescription = document.getElementById("spModalDescription");
+  const modalScopeIntro = document.getElementById("spModalScopeIntro");
+  const modalScopeList = document.getElementById("spModalScopeList");
+  const modalCaption = document.getElementById("spModalCaption");
+  const modalAvatar = document.getElementById("spModalAvatar");
+
+  const prevMediaButton = document.getElementById("spPrevMedia");
+  const nextMediaButton = document.getElementById("spNextMedia");
+  const prevProjectButton = document.getElementById("spPrevProject");
+  const nextProjectButton = document.getElementById("spNextProject");
+
+  let activeProjectIndex = 0;
+  let activeMediaIndex = 0;
+
+  function preloadImage(src) {
+    if (!src) return;
+    const img = new Image();
+    img.decoding = "async";
+    img.src = src;
+  }
+
+  function preloadNearbyMedia(projectIndex, mediaIndex) {
+    const project = projects[projectIndex];
+    if (!project) return;
+
+    const nextMedia = project.media[mediaIndex + 1];
+    const prevMedia = project.media[mediaIndex - 1];
+
+    [nextMedia, prevMedia].forEach((item) => {
+      if (!item) return;
+      if (item.type === "image") preloadImage(item.src);
+      if (item.type === "video" && item.poster) preloadImage(item.poster);
+    });
+  }
+
+  function preloadNextProjectThumbnail(projectIndex) {
+    const nextProject = projects[(projectIndex + 1) % projects.length];
+    if (nextProject) preloadImage(nextProject.thumbnail);
+  }
+
+  function renderProjectCards() {
+    grid.innerHTML = projects
+      .map((project, index) => {
+        const hasVideo = project.media.some((item) => item.type === "video");
+
+        return `
+          <article class="sp-card">
+            <button class="sp-card__button" type="button" data-project-index="${index}">
+              <div class="sp-card__media">
+                <span class="sp-card__status">${project.status}</span>
+                ${hasVideo ? '<span class="sp-card__media-badge">Video</span>' : ""}
+                <img
+                  src="${project.thumbnail}"
+                  alt="${project.title} thumbnail"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+
+              <div class="sp-card__body">
+                <div class="sp-card__head">
+                  <h3>${project.title}</h3>
+                  <p>${project.projectType}</p>
+                </div>
+
+                <div class="sp-card__scope">
+                  <span>What Is Being Worked On</span>
+                  <p>${project.scopeTitle}</p>
+                </div>
+
+                <p class="sp-card__caption">${project.caption}</p>
+                <div class="sp-card__cta">Open Project Post</div>
+              </div>
+            </button>
+          </article>
+        `;
+      })
+      .join("");
+  }
+
+  function renderProjectModal(index) {
+    const project = projects[index];
+    activeProjectIndex = index;
+    activeMediaIndex = 0;
+
+    modalTitle.textContent = project.title;
+    modalSubtext.textContent = project.subtext;
+    modalStatus.textContent = project.status;
+    modalType.textContent = project.projectType;
+    modalCode.textContent = project.id;
+    modalWorkType.textContent = project.workType;
+    modalMediaCount.textContent = project.media.length;
+    modalDescription.textContent = project.description;
+    modalScopeIntro.textContent = project.scopeIntro;
+    modalCaption.textContent = project.caption;
+    modalAvatar.textContent = project.title.charAt(0).toUpperCase();
+
+    modalScopeList.innerHTML = project.scopeItems.map((item) => `<li>${item}</li>`).join("");
+
+    renderActiveMedia();
+    preloadNextProjectThumbnail(index);
+  }
+
+  function renderActiveMedia() {
+    const project = projects[activeProjectIndex];
+    const media = project.media[activeMediaIndex];
+
+    if (media.type === "video") {
+      mediaStage.innerHTML = `
+        <video controls playsinline preload="none" poster="${media.poster || ""}">
+          <source src="${media.src}" type="video/mp4">
+        </video>
+      `;
+    } else {
+      mediaStage.innerHTML = `
+        <img
+          src="${media.src}"
+          alt="${media.alt}"
+          decoding="async"
+        >
+      `;
+    }
+
+    mediaDots.innerHTML = project.media
+      .map(
+        (_, index) => `
+          <button
+            class="sp-modal__dot ${index === activeMediaIndex ? "is-active" : ""}"
+            type="button"
+            data-media-index="${index}"
+            aria-label="Go to media ${index + 1}"
+          ></button>
+        `
+      )
+      .join("");
+
+    preloadNearbyMedia(activeProjectIndex, activeMediaIndex);
+  }
+
+  function stopActiveVideo() {
+    const video = mediaStage.querySelector("video");
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }
+
+  function openModal(index) {
+    renderProjectModal(index);
+    modal.classList.add("is-active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  }
+
+  function closeModal() {
+    stopActiveVideo();
+    modal.classList.remove("is-active");
+    modal.setAttribute("aria-hidden", "true");
+    mediaStage.innerHTML = "";
+    document.body.classList.remove("modal-open");
+  }
+
+  function showNextMedia() {
+    stopActiveVideo();
+    const project = projects[activeProjectIndex];
+    activeMediaIndex = (activeMediaIndex + 1) % project.media.length;
+    renderActiveMedia();
+  }
+
+  function showPrevMedia() {
+    stopActiveVideo();
+    const project = projects[activeProjectIndex];
+    activeMediaIndex = (activeMediaIndex - 1 + project.media.length) % project.media.length;
+    renderActiveMedia();
+  }
+
+  function showNextProject() {
+    stopActiveVideo();
+    const nextIndex = (activeProjectIndex + 1) % projects.length;
+    renderProjectModal(nextIndex);
+  }
+
+  function showPrevProject() {
+    stopActiveVideo();
+    const prevIndex = (activeProjectIndex - 1 + projects.length) % projects.length;
+    renderProjectModal(prevIndex);
+  }
+
+  grid.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-project-index]");
+    if (!button) return;
+    openModal(Number(button.dataset.projectIndex));
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target.hasAttribute("data-close-modal")) {
+      closeModal();
+      return;
+    }
+
+    const dot = event.target.closest("[data-media-index]");
+    if (dot) {
+      stopActiveVideo();
+      activeMediaIndex = Number(dot.dataset.mediaIndex);
+      renderActiveMedia();
+    }
+  });
+
+  prevMediaButton.addEventListener("click", showPrevMedia);
+  nextMediaButton.addEventListener("click", showNextMedia);
+  prevProjectButton.addEventListener("click", showPrevProject);
+  nextProjectButton.addEventListener("click", showNextProject);
+
+  document.addEventListener("keydown", (event) => {
+    if (!modal.classList.contains("is-active")) return;
+
+    if (event.key === "Escape") closeModal();
+    if (event.key === "ArrowLeft") showPrevMedia();
+    if (event.key === "ArrowRight") showNextMedia();
+  });
+
+  renderProjectCards();
+  preloadImage(projects[0]?.thumbnail);
+</script>
+
+{% endblock %}

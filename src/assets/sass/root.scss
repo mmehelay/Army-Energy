@@ -670,7 +670,7 @@
         width: 100%;
         height: calc(88 / 16 * 1rem);
         box-sizing: border-box;
-        padding: 0 calc(32 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
         background: rgba(8, 16, 26, 0.72);
         backdrop-filter: blur(12px);
         border-bottom: 1px solid rgba(212, 160, 23, 0.24);
@@ -682,13 +682,12 @@
 
         .cs-container {
             width: 100%;
-            max-width: calc(1440 / 16 * 1rem);
+            max-width: calc(1560 / 16 * 1rem);
             height: 100%;
             margin: auto;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            gap: calc(32 / 16 * 1rem);
+            gap: calc(28 / 16 * 1rem);
         }
 
         .cs-toggle {
@@ -698,10 +697,11 @@
         .cs-logo {
             width: auto;
             height: auto;
-            max-width: clamp(11rem, 15vw, 14rem);
+            max-width: clamp(11rem, 13vw, 13.5rem);
             display: flex;
             align-items: center;
-            flex: none;
+            flex: 0 0 auto;
+            margin-right: calc(8 / 16 * 1rem);
 
             img {
                 width: 100%;
@@ -713,12 +713,20 @@
         }
 
         .cs-nav {
-            margin: 0 auto;
             height: 100%;
+            flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            min-width: 0;
         }
 
         .cs-ul-wrapper {
             height: 100%;
+            flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
         }
 
         .cs-ul {
@@ -727,7 +735,8 @@
             padding: 0;
             display: flex;
             align-items: center;
-            gap: clamp(1rem, 1.7vw, 2rem);
+            justify-content: center;
+            gap: clamp(1.1rem, 1.45vw, 1.9rem);
             list-style: none;
         }
 
@@ -737,6 +746,7 @@
             align-items: center;
             list-style: none;
             position: relative;
+            flex: 0 0 auto;
         }
 
         .cs-li-link,
@@ -745,7 +755,7 @@
             border: none;
             padding: 0;
             font-size: calc(15 / 16 * 1rem);
-            line-height: 1.5em;
+            line-height: 1.45em;
             text-decoration: none;
             color: #fff;
             font-family: var(--bodyFont);
@@ -753,7 +763,10 @@
             letter-spacing: 0.03em;
             display: flex;
             align-items: center;
+            justify-content: center;
+            text-align: center;
             cursor: pointer;
+            white-space: nowrap;
             transition: color 0.3s;
 
             &:hover,
@@ -779,6 +792,7 @@
             height: auto;
             margin-left: calc(6 / 16 * 1rem);
             transition: transform 0.3s;
+            flex: 0 0 auto;
         }
 
         .cs-drop-ul {
@@ -794,10 +808,10 @@
             list-style: none;
             position: absolute;
             top: 100%;
-            left: 0;
+            left: 50%;
             opacity: 0;
             visibility: hidden;
-            transform: translateY(10px);
+            transform: translate(-50%, 10px);
             transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
         }
 
@@ -813,6 +827,7 @@
             color: rgba(255, 255, 255, 0.78);
             white-space: nowrap;
             font-size: calc(15 / 16 * 1rem);
+            text-align: left;
             transition: background-color 0.3s, color 0.3s;
 
             &:hover {
@@ -824,15 +839,17 @@
         .cs-header-actions {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
             gap: calc(12 / 16 * 1rem);
-            flex-shrink: 0;
+            flex: 0 0 auto;
+            margin-left: auto;
         }
 
         .cs-company-badge {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: calc(12 / 16 * 1rem) calc(20 / 16 * 1rem);
+            padding: calc(12 / 16 * 1rem) calc(18 / 16 * 1rem);
             border: 1px solid rgba(212, 160, 23, 0.35);
             border-radius: calc(30 / 16 * 1rem);
             background: rgba(255, 255, 255, 0.04);

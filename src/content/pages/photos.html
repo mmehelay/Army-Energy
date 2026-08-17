@@ -178,41 +178,62 @@ permalink: "/photos/"
   ];
 
 
-  const projects = projectNames.map((name, index) => {
-    const profile = workProfiles[index % workProfiles.length];
-    const id = String(index + 1).padStart(2, "0");
+  const workProfiles = [
+  {
+    status: "In Progress",
+    workType: "Photovoltaic Power Plant",
+    scopeTitle: "Project Scope",
+    description:
+      "Army Energy, A Division of Army Electric Inc. Licensed Electrical Contractor — ECRA/ESA #7009302. Ontario Feed-in Tariff (FIT) installation. All electrical work performed under ESA permit and inspected to the Ontario Electrical Safety Code.",
+    scopeIntro: "",
+    scopeItems: [
+      "Photovoltaic system",
+      "DC wiring",
+      "DC/AC inverters",
+      "AC distribution and metering",
+      "Site commissioning",
+      "Connection Impact Assessment — utility witness testing"
+    ],
+    caption: "Project highlights showcasing the completed photovoltaic system and electrical infrastructure."
+  }
+];
 
-    return {
-  id,
-  title: `Photovoltaic Power Plant #${id}`,
-  subtext: name,
-  projectType: "Photovoltaic Power Plant",
-  status: profile.status,
-  workType: profile.workType,
-  scopeTitle: profile.scopeTitle,
-  description: profile.description,
-  scopeIntro: profile.scopeIntro,
-  scopeItems: profile.scopeItems,
-  caption: profile.caption,
-  thumbnail: `/assets/images/solar-projects/project-${id}/cover.JPG`,
-  media: [
-    {
-      type: "image",
-      src: `/assets/images/solar-projects/project-${id}/cover.JPG`,
-      alt: `Photovoltaic Power Plant #${id} cover image`
-    },
-    {
-      type: "image",
-      src: `/assets/images/solar-projects/project-${id}/detail-1.JPG`,
-      alt: `Photovoltaic Power Plant #${id} detail image`
-    },
-    {
-      type: "video",
-      src: `https://pub-fcfb498991a14ed7b061963859c3fe66.r2.dev/project-${id}/Video-poster.mp4`,
-      poster: `/assets/images/solar-projects/project-${id}/cover.JPG`
-    }
-  ]
-};
+const projects = projectNames.map((name, index) => {
+  const profile = workProfiles[index % workProfiles.length];
+  const id = String(index + 1).padStart(2, "0");
+
+  return {
+    id,
+    title: `Photovoltaic Power Plant #${id}`,
+    subtext: name,
+    projectType: "Photovoltaic Power Plant",
+    status: profile.status,
+    workType: profile.workType,
+    scopeTitle: profile.scopeTitle,
+    description: profile.description,
+    scopeIntro: profile.scopeIntro,
+    scopeItems: profile.scopeItems,
+    caption: profile.caption,
+    thumbnail: `/assets/images/solar-projects/project-${id}/cover.JPG`,
+    media: [
+      {
+        type: "image",
+        src: `/assets/images/solar-projects/project-${id}/cover.JPG`,
+        alt: `Photovoltaic Power Plant #${id} cover image`
+      },
+      {
+        type: "image",
+        src: `/assets/images/solar-projects/project-${id}/detail-1.JPG`,
+        alt: `Photovoltaic Power Plant #${id} detail image`
+      },
+      {
+        type: "video",
+        src: `https://pub-fcfb498991a14ed7b061963859c3fe66.r2.dev/project-${id}/Video-poster.mp4`,
+        poster: `/assets/images/solar-projects/project-${id}/cover.JPG`
+      }
+    ]
+  };
+});
 
   const grid = document.getElementById("spProjectGrid");
   const modal = document.getElementById("spProjectModal");
@@ -286,14 +307,11 @@ permalink: "/photos/"
               </div>
 
               <div class="sp-card__body">
+       
+
                 <div class="sp-card__head">
                   <h3>${project.title}</h3>
-                  <p>${project.projectType}</p>
-                </div>
-
-                <div class="sp-card__scope">
-                  <span>Project Scope</span>
-                  <p>${project.scopeTitle}</p>
+                  <p>${project.subtext}</p>
                 </div>
 
                 <p class="sp-card__caption">${project.caption}</p>

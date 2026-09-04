@@ -1,706 +1,460 @@
 body.modal-open {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+:root {
+  --sp-blue: #132b7e;
+  --sp-blue-light: #2f67ff;
+  --sp-gold: #ffbf18;
+  --sp-text: #24345d;
+  --sp-muted: #64739a;
+  --sp-border: rgba(19, 43, 126, 0.1);
+  --sp-surface: rgba(255, 255, 255, 0.94);
+  --sp-shadow: 0 24px 60px rgba(19, 43, 126, 0.14);
+  --sp-radius-xl: 2rem;
+  --sp-radius-lg: 1.5rem;
+}
+
+.sahal-solar-portfolio {
+  background:
+    radial-gradient(circle at top left, rgba(255, 191, 24, 0.15), transparent 24rem),
+    radial-gradient(circle at top right, rgba(47, 103, 255, 0.1), transparent 26rem),
+    #fff;
+  color: var(--sp-text);
+  overflow: hidden;
+
+  * {
+    box-sizing: border-box;
   }
-  
-  :root {
-    --sp-blue: #132b7e;
-    --sp-blue-light: #2f67ff;
-    --sp-gold: #ffbf18;
-    --sp-text: #24345d;
-    --sp-muted: #64739a;
-    --sp-border: rgba(19, 43, 126, 0.1);
-    --sp-surface: rgba(255, 255, 255, 0.94);
-    --sp-shadow: 0 24px 60px rgba(19, 43, 126, 0.14);
-    --sp-radius-xl: 2rem;
-    --sp-radius-lg: 1.5rem;
-    --sp-radius-md: 1rem;
+
+  img,
+  video {
+    max-width: 100%;
+    display: block;
   }
-  
-  .sahal-solar-portfolio {
-    background:
-      radial-gradient(circle at top left, rgba(255, 191, 24, 0.15), transparent 24rem),
-      radial-gradient(circle at top right, rgba(47, 103, 255, 0.1), transparent 26rem),
-      #fff;
-    color: var(--sp-text);
-    overflow: hidden;
-  
-    * {
-      box-sizing: border-box;
-    }
-  
-    img,
-    video {
-      max-width: 100%;
-      display: block;
-    }
-  
-    button {
-      font: inherit;
-    }
-  
-    .sp-container {
-      width: min(100% - 2rem, 80rem);
-      margin: 0 auto;
-    }
-  
-    .sp-eyebrow {
-      margin: 0;
-      color: var(--sp-blue-light);
-      font-size: 0.875rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-    }
-  
-    .sp-section-head {
-      text-align: center;
-      margin-bottom: 2.5rem;
-  
-      h2 {
-        margin: 0.65rem 0 0;
-        font-size: clamp(2rem, 4vw, 3rem);
-        line-height: 1.08;
-        color: var(--sp-blue);
-      }
-  
-      p {
-        max-width: 42rem;
-        margin: 1rem auto 0;
-        color: var(--sp-muted);
-        line-height: 1.7;
-        font-size: 1.05rem;
-      }
-    }
-  
-    .sp-hero {
-        padding-top: calc(120 / 16 * 1rem);
-    }
-  
-    .sp-hero__grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
-      gap: clamp(2rem, 5vw, 4rem);
-      align-items: center;
-    }
-  
-    .sp-hero__content {
-      h1 {
-        margin: 0.75rem 0 1rem;
-        font-size: clamp(2.7rem, 6vw, 4.9rem);
-        line-height: 0.98;
-        letter-spacing: -0.045em;
-        color: var(--sp-blue);
-        max-width: 12ch;
-      }
-  
-      p:not(.sp-eyebrow) {
-        max-width: 38rem;
-        margin: 0;
-        color: var(--sp-muted);
-        font-size: 1.1rem;
-        line-height: 1.75;
-      }
-    }
-  
-    .sp-hero__stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 2rem;
-  
-      article {
-        padding: 1.25rem;
-        background: var(--sp-surface);
-        border: 1px solid var(--sp-border);
-        border-radius: 1.25rem;
-        box-shadow: var(--sp-shadow);
-      }
-  
-      strong {
-        display: block;
-        color: var(--sp-blue);
-        font-size: 1.2rem;
-      }
-  
-      span {
-        display: block;
-        margin-top: 0.35rem;
-        color: var(--sp-muted);
-        line-height: 1.5;
-      }
-    }
-  
-    .sp-hero__card {
-      background: var(--sp-surface);
-      border: 1px solid var(--sp-border);
-      border-radius: var(--sp-radius-xl);
-      box-shadow: var(--sp-shadow);
-      overflow: hidden;
-    }
-  
-    .sp-hero__card-header {
-      display: flex;
-      gap: 0.45rem;
-      padding: 1rem 1.15rem;
-      border-bottom: 1px solid var(--sp-border);
-    }
-  
-    .sp-hero__dot {
-      width: 0.7rem;
-      height: 0.7rem;
-      border-radius: 50%;
-      background: rgba(19, 43, 126, 0.16);
-  
-      &:first-child {
-        background: var(--sp-gold);
-      }
-    }
-  
-    .sp-hero__card-body {
-      padding: 1.5rem;
-    }
-  
-    .sp-hero__mock-media {
-      aspect-ratio: 4 / 5;
-      border-radius: 1.4rem;
-      background:
-        linear-gradient(145deg, rgba(47, 103, 255, 0.18), rgba(19, 43, 126, 0.06)),
-        url("/assets/images/solar-projects/project-01/cover.JPG") center / cover no-repeat;
-    }
-  
-    .sp-hero__mock-lines {
-      margin-top: 1.25rem;
-  
-      span {
-        display: block;
-        height: 0.85rem;
-        border-radius: 999px;
-        background: rgba(19, 43, 126, 0.08);
-        margin-bottom: 0.7rem;
-  
-        &:nth-child(1) {
-          width: 78%;
-        }
-  
-        &:nth-child(2) {
-          width: 100%;
-        }
-  
-        &:nth-child(3) {
-          width: 62%;
-          margin-bottom: 0;
-        }
-      }
-    }
-  
-    .sp-gallery {
-      padding: 2rem 0 5rem;
-    }
-  
-    .sp-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-  
-    .sp-card {
-      background: var(--sp-surface);
-      border: 1px solid var(--sp-border);
-      border-radius: var(--sp-radius-lg);
-      box-shadow: var(--sp-shadow);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .sp-card__button {
-      appearance: none;
-      background: none;
-      border: 0;
-      padding: 0;
-      text-align: left;
-      color: inherit;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-  
-    .sp-card__media {
-      position: relative;
-      aspect-ratio: 4 / 4.4;
-      overflow: hidden;
-      background: #eef3ff;
-  
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.35s ease;
-      }
-    }
-  
-    .sp-card:hover .sp-card__media img {
-      transform: scale(1.04);
-    }
-  
-    .sp-card__status,
-    .sp-card__media-badge {
-      position: absolute;
-      top: 1rem;
-      z-index: 1;
-      border-radius: 999px;
-      padding: 0.45rem 0.8rem;
-      font-size: 0.78rem;
-      font-weight: 700;
-      backdrop-filter: blur(12px);
-    }
-  
-    .sp-card__status {
-      left: 1rem;
-      background: rgba(19, 43, 126, 0.82);
-      color: #fff;
-    }
-  
-    .sp-card__media-badge {
-      right: 1rem;
-      background: rgba(255, 255, 255, 0.88);
+
+  button {
+    font: inherit;
+  }
+
+  .sp-container {
+    width: min(100% - 2rem, 80rem);
+    margin: 0 auto;
+  }
+
+  .sp-eyebrow {
+    margin: 0;
+    color: var(--sp-blue-light);
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+  }
+
+  .sp-section-head {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    h2 {
+      margin: 0.65rem 0 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.08;
       color: var(--sp-blue);
     }
-  
-    .sp-card__body {
-      padding: 1.25rem 1.25rem 1.4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.9rem;
-      flex: 1;
-    }
-  
-    .sp-card__head {
-      h3 {
-        margin: 0 0 0.35rem;
-        color: var(--sp-blue);
-        font-size: 1.2rem;
-        line-height: 1.2;
-        word-break: break-word;
-      }
-  
-      p {
-        margin: 0;
-        color: var(--sp-muted);
-        line-height: 1.5;
-      }
-    }
-  
-    .sp-card__scope {
-      padding: 0.95rem 1rem;
-      background: rgba(47, 103, 255, 0.05);
-      border-radius: 1rem;
-  
-      span {
-        display: block;
-        margin-bottom: 0.35rem;
-        color: var(--sp-blue);
-        font-size: 0.76rem;
-        font-weight: 800;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-  
-      p {
-        margin: 0;
-        color: var(--sp-text);
-        font-weight: 700;
-        line-height: 1.5;
-      }
-    }
-  
-    .sp-card__caption {
-      margin: 0;
+
+    p {
+      max-width: 42rem;
+      margin: 1rem auto 0;
       color: var(--sp-muted);
       line-height: 1.7;
+      font-size: 1.05rem;
     }
-  
-    .sp-card__cta {
-      margin-top: auto;
-      color: var(--sp-blue-light);
-      font-weight: 800;
-      letter-spacing: 0.02em;
-    }
-  
-    .sp-modal {
-      position: fixed;
-      inset: 0;
-      display: none;
-      z-index: 20000;
-  
-      &.is-active {
-        display: block;
-      }
-    }
-  
-    .sp-modal__backdrop {
-      position: absolute;
-      inset: 0;
-      background: rgba(10, 22, 60, 0.7);
-      backdrop-filter: blur(8px);
-    }
-  
-    .sp-modal__dialog {
-      position: relative;
-      width: min(100% - 2rem, 92rem);
-      height: min(92vh, 56rem);
-      margin: 1rem auto;
-      background: #fff;
-      border-radius: 1.6rem;
-      overflow: hidden;
-      box-shadow: 0 24px 80px rgba(8, 18, 52, 0.34);
-      z-index: 20001;
-    }
-  
-    .sp-modal__close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 2.8rem;
-      height: 2.8rem;
-      border: 0;
-      border-radius: 50%;
-      background: rgba(19, 43, 126, 0.9);
-      color: #fff;
-      font-size: 1.8rem;
-      line-height: 1;
-      cursor: pointer;
-      z-index: 4;
-    }
-  
-    .sp-modal__layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(22rem, 0.65fr);
-      height: 100%;
-    }
-  
-    .sp-modal__media {
-      position: relative;
-      background: #081535;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 0;
-      overflow: hidden;
-    }
-  
-    .sp-modal__media-stage {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-  
-      img,
-      video {
-        width: 100%;
-        height: 100%;
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        border-radius: 1rem;
-        background: #081535;
-      }
-  
-      video {
-        display: block;
-      }
-    }
-  
-    .sp-modal__nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 3rem;
-      height: 3rem;
-      border: 0;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.9);
+  }
+
+  .sp-hero {
+    padding: clamp(3rem, 7vw, 5.5rem) 0 3rem;
+  }
+
+  .sp-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+
+  .sp-hero__content {
+    h1 {
+      margin: 0.75rem 0 1rem;
+      font-size: clamp(2.7rem, 6vw, 4.9rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
       color: var(--sp-blue);
-      font-size: 1.4rem;
-      cursor: pointer;
-      z-index: 2;
-  
-      &--prev {
-        left: 1rem;
-      }
-  
-      &--next {
-        right: 1rem;
-      }
+      max-width: 12ch;
     }
-  
-    .sp-modal__dots {
-      position: absolute;
-      left: 50%;
-      bottom: 1rem;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 0.5rem;
-      z-index: 2;
-    }
-  
-    .sp-modal__dot {
-      width: 0.7rem;
-      height: 0.7rem;
-      border: 0;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.48);
-      cursor: pointer;
-  
-      &.is-active {
-        background: var(--sp-gold);
-      }
-    }
-  
-    .sp-modal__sidebar {
-      padding: 2rem;
-      overflow-y: auto;
-      background:
-        radial-gradient(circle at top left, rgba(255, 191, 24, 0.12), transparent 14rem),
-        #fff;
-    }
-  
-    .sp-modal__listing-head {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-  
-    .sp-modal__avatar {
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--sp-blue-light), var(--sp-blue));
-      color: #fff;
-      font-size: 1.2rem;
-      font-weight: 800;
-    }
-  
-    .sp-modal__eyebrow {
-      margin: 0 0 0.2rem;
-      color: var(--sp-blue-light);
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-    }
-  
-    .sp-modal__listing-head h3 {
+
+    p:not(.sp-eyebrow) {
+      max-width: 38rem;
       margin: 0;
-      color: var(--sp-blue);
-      font-size: 1.45rem;
-      line-height: 1.15;
-      word-break: break-word;
+      color: var(--sp-muted);
+      font-size: 1.1rem;
+      line-height: 1.75;
     }
-  
-    .sp-modal__location {
-      margin: 0.35rem 0 0;
+  }
+
+  .sp-hero__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+
+    article {
+      padding: 1.25rem;
+      background: var(--sp-surface);
+      border: 1px solid var(--sp-border);
+      border-radius: 1.25rem;
+      box-shadow: var(--sp-shadow);
+    }
+
+    strong {
+      display: block;
+      color: var(--sp-blue);
+      font-size: 1.2rem;
+    }
+
+    span {
+      display: block;
+      margin-top: 0.35rem;
       color: var(--sp-muted);
       line-height: 1.5;
     }
-  
-    .sp-modal__badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-      margin-top: 1.4rem;
-  
-      span {
-        padding: 0.55rem 0.8rem;
-        border-radius: 999px;
-        background: rgba(47, 103, 255, 0.08);
-        color: var(--sp-blue);
-        font-weight: 700;
-        font-size: 0.86rem;
-      }
+  }
+
+  .sp-hero__card {
+    background: var(--sp-surface);
+    border: 1px solid var(--sp-border);
+    border-radius: var(--sp-radius-xl);
+    box-shadow: var(--sp-shadow);
+    overflow: hidden;
+  }
+
+  .sp-hero__card-header {
+    display: flex;
+    gap: 0.45rem;
+    padding: 1rem 1.15rem;
+    border-bottom: 1px solid var(--sp-border);
+  }
+
+  .sp-hero__dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: rgba(19, 43, 126, 0.16);
+
+    &:first-child {
+      background: var(--sp-gold);
     }
-  
-    .sp-modal__meta {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.8rem;
-      margin-top: 1.4rem;
-  
-      article {
-        padding: 1rem 0.8rem;
-        border-radius: 1rem;
-        background: rgba(19, 43, 126, 0.05);
-        text-align: center;
+  }
+
+  .sp-hero__card-body {
+    padding: 1.5rem;
+  }
+
+  .sp-hero__mock-media {
+    aspect-ratio: 4 / 5;
+    border-radius: 1.4rem;
+    background:
+      linear-gradient(145deg, rgba(47, 103, 255, 0.18), rgba(19, 43, 126, 0.06)),
+      url("/assets/images/solar-projects/project-01/cover.JPG") center / cover no-repeat;
+  }
+
+  .sp-hero__mock-lines {
+    margin-top: 1.25rem;
+
+    span {
+      display: block;
+      height: 0.85rem;
+      border-radius: 999px;
+      background: rgba(19, 43, 126, 0.08);
+      margin-bottom: 0.7rem;
+
+      &:nth-child(1) {
+        width: 78%;
       }
-  
-      strong {
-        display: block;
-        color: var(--sp-blue);
-        font-size: 1rem;
-        line-height: 1.3;
+
+      &:nth-child(2) {
+        width: 100%;
       }
-  
-      span {
-        display: block;
-        margin-top: 0.25rem;
-        color: var(--sp-muted);
-        font-size: 0.84rem;
-      }
-    }
-  
-    .sp-modal__copy,
-    .sp-modal__scope {
-      margin-top: 1.5rem;
-  
-      h4 {
-        margin: 0 0 0.7rem;
-        color: var(--sp-blue);
-        font-size: 1rem;
-      }
-  
-      p {
-        margin: 0;
-        color: var(--sp-muted);
-        line-height: 1.8;
-      }
-    }
-  
-    .sp-modal__scope ul {
-      margin: 0.85rem 0 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 0.7rem;
-    }
-  
-    .sp-modal__scope li {
-      position: relative;
-      padding-left: 1.2rem;
-      color: var(--sp-text);
-      line-height: 1.6;
-  
-      &::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: var(--sp-gold);
-        font-weight: 900;
-      }
-    }
-  
-    .sp-modal__caption {
-      margin-top: 1.6rem;
-      padding: 1rem 1.1rem;
-      border-radius: 1rem;
-      background: rgba(255, 191, 24, 0.12);
-  
-      p {
-        margin: 0;
-        line-height: 1.7;
-      }
-    }
-  
-    .sp-modal__caption-label {
-      color: var(--sp-blue);
-      font-weight: 800;
-      margin-bottom: 0.35rem !important;
-    }
-  
-    .sp-modal__footer {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem;
-      margin-top: 1.6rem;
-    }
-  
-    .sp-modal__property-btn {
-      min-height: 3.1rem;
-      border-radius: 0.95rem;
-      border: 1px solid rgba(19, 43, 126, 0.14);
-      background: #fff;
-      color: var(--sp-blue);
-      font-weight: 700;
-      cursor: pointer;
-  
-      &--primary {
-        background: linear-gradient(135deg, var(--sp-blue-light), var(--sp-blue));
-        border-color: transparent;
-        color: #fff;
-      }
-    }
-  
-    @media (max-width: 1024px) {
-      .sp-hero__grid,
-      .sp-modal__layout {
-        grid-template-columns: 1fr;
-      }
-  
-      .sp-hero__stats,
-      .sp-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-  
-      .sp-modal__dialog {
-        width: min(100% - 1rem, 60rem);
-        height: min(94vh, 64rem);
-        margin: 0.5rem auto;
-      }
-  
-      .sp-modal__layout {
-        grid-template-rows: minmax(18rem, 48vh) 1fr;
-      }
-  
-      .sp-modal__media-stage {
-        padding: 0.75rem;
-      }
-    }
-  
-    @media (max-width: 767px) {
-      .sp-container {
-        width: min(100% - 1.25rem, 42rem);
-      }
-  
-      .sp-hero__content h1 {
-        max-width: 100%;
-        font-size: clamp(2.35rem, 11vw, 3.75rem);
-      }
-  
-      .sp-hero__stats,
-      .sp-grid,
-      .sp-modal__meta,
-      .sp-modal__footer {
-        grid-template-columns: 1fr;
-      }
-  
-      .sp-modal__dialog {
-        width: min(100% - 0.75rem, 100%);
-        height: min(96vh, 100%);
-        border-radius: 1.1rem;
-      }
-  
-      .sp-modal__layout {
-        grid-template-rows: minmax(15rem, 38vh) 1fr;
-      }
-  
-      .sp-modal__sidebar {
-        padding: 1.25rem;
-      }
-  
-      .sp-modal__media-stage {
-        padding: 0.5rem;
-      }
-  
-      .sp-modal__nav {
-        width: 2.5rem;
-        height: 2.5rem;
-      }
-  
-      .sp-modal__listing-head h3 {
-        font-size: 1.25rem;
+
+      &:nth-child(3) {
+        width: 62%;
+        margin-bottom: 0;
       }
     }
   }
+
+  .sp-gallery {
+    padding: 2rem 0 5rem;
+  }
+
+  .sp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .sp-card {
+    background: var(--sp-surface);
+    border: 1px solid var(--sp-border);
+    border-radius: var(--sp-radius-lg);
+    box-shadow: var(--sp-shadow);
+    overflow: hidden;
+  }
+
+  .sp-card__button {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .sp-card__media {
+    position: relative;
+    aspect-ratio: 4 / 4.4;
+    overflow: hidden;
+    background: #eef3ff;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+  }
+
+  .sp-card:hover .sp-card__media img {
+    transform: scale(1.04);
+  }
+
+  .sp-card__media-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.88);
+    color: var(--sp-blue);
+    backdrop-filter: blur(12px);
+  }
+
+  .sp-card__body {
+    padding: 1.25rem 1.25rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .sp-card__head {
+    h3 {
+      margin: 0 0 0.35rem;
+      color: var(--sp-blue);
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      color: var(--sp-muted);
+      line-height: 1.5;
+    }
+  }
+
+  .sp-card__cta {
+    color: var(--sp-blue-light);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+
+  .sp-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 20000;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  .sp-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 22, 60, 0.72);
+    backdrop-filter: blur(8px);
+  }
+
+  .sp-modal__dialog {
+    position: relative;
+    width: min(100% - 2rem, 92rem);
+    height: min(92vh, 56rem);
+    margin: 1rem auto;
+    background: #081535;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(8, 18, 52, 0.34);
+    z-index: 20001;
+  }
+
+  .sp-modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .sp-modal__media {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #081535;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .sp-modal__media-stage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    img,
+    video {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      background: #081535;
+      border-radius: 1rem;
+    }
+  }
+
+  .sp-modal__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--sp-blue);
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 3;
+
+    &--prev {
+      left: 1rem;
+    }
+
+    &--next {
+      right: 1rem;
+    }
+  }
+
+  .sp-modal__dots {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 3;
+  }
+
+  .sp-modal__dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+
+    &.is-active {
+      background: var(--sp-gold);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .sp-hero__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .sp-hero__stats {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sp-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sp-modal__dialog {
+      width: min(100% - 1rem, 60rem);
+      height: min(94vh, 64rem);
+      margin: 0.5rem auto;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .sp-container {
+      width: min(100% - 1.25rem, 42rem);
+    }
+
+    .sp-hero {
+      padding-top: calc(120 / 16 * 1rem);
+    }
+
+    .sp-hero__content h1 {
+      max-width: 100%;
+      font-size: clamp(2.35rem, 11vw, 3.75rem);
+    }
+
+    .sp-hero__stats,
+    .sp-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .sp-modal__dialog {
+      width: min(100% - 0.75rem, 100%);
+      height: min(96vh, 100%);
+      border-radius: 1.1rem;
+    }
+
+    .sp-modal__media-stage {
+      padding: 0.5rem;
+    }
+
+    .sp-modal__nav {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}
